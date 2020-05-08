@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://github.com/makersmelx</id>
     <title>ぽかぽかの星</title>
-    <updated>2020-05-08T16:20:33.071Z</updated>
+    <updated>2020-05-08T16:22:26.716Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://github.com/makersmelx"/>
     <link rel="self" href="https://github.com/makersmelx/atom.xml"/>
@@ -288,16 +288,16 @@ describe('Counter', () =&gt; {
     });
 
 </code></pre>
-<p>写的这个简单的sample在https://github.com/makersmelx/react-test-learning<br>
-后头还要加一堆....我有一个带了好几个ant design form的页面要测...想想就头大。<br>
-之前看到个报告说40%的前端工程师承认没有用过测试，请带我一个。</p>
+<p>写的这个简单的sample在 <a href="https://github.com/makersmelx/react-test-learning">https://github.com/makersmelx/react-test-learning</a></p>
+<p>后头还要加一堆....我有一个带了好几个ant design form的页面要测...想想就头大。</p>
+<p>之前看到个报告说40%的前端工程师承认没有用过测试，请务必带我一个。</p>
 <h3 id="参考">参考</h3>
 <ol>
 <li>
-<p>How to test React with Jest, https://www.robinwieruch.de/react-testing-jest</p>
+<p>How to test React with Jest, <a href="https://www.robinwieruch.de/react-testing-jest">https://www.robinwieruch.de/react-testing-jest</a></p>
 </li>
 <li>
-<p>Jest encountered unexpected token with React app, https://github.com/facebook/jest/issues/6933</p>
+<p>Jest encountered unexpected token with React app, <a href="https://github.com/facebook/jest/issues/6933">https://github.com/facebook/jest/issues/6933</a></p>
 </li>
 </ol>
 ]]></content>
