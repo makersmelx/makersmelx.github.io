@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://github.com</id>
+    <id>https://makersmelx.github.io</id>
     <title>ぽかぽかの星</title>
-    <updated>2020-05-08T16:29:59.280Z</updated>
+    <updated>2020-05-08T16:31:20.843Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://github.com"/>
-    <link rel="self" href="https://github.com/atom.xml"/>
+    <link rel="alternate" href="https://makersmelx.github.io"/>
+    <link rel="self" href="https://makersmelx.github.io/atom.xml"/>
     <subtitle>假药，随手想起来的时候就随手写一点...的个人网页</subtitle>
-    <logo>https://github.com/images/avatar.png</logo>
-    <icon>https://github.com/favicon.ico</icon>
+    <logo>https://makersmelx.github.io/images/avatar.png</logo>
+    <icon>https://makersmelx.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, ぽかぽかの星</rights>
     <entry>
         <title type="html"><![CDATA[React单元测试 Jest+Enzyme]]></title>
-        <id>https://github.com/post/react-dan-yuan-ce-shi-jestenzyme/</id>
-        <link href="https://github.com/post/react-dan-yuan-ce-shi-jestenzyme/">
+        <id>https://makersmelx.github.io/post/react-dan-yuan-ce-shi-jestenzyme/</id>
+        <link href="https://makersmelx.github.io/post/react-dan-yuan-ce-shi-jestenzyme/">
         </link>
         <updated>2020-05-08T16:16:57.000Z</updated>
         <content type="html"><![CDATA[<h3 id="0-背景">0. 背景</h3>
