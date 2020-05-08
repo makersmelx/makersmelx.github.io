@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://github.com/makersmelx</id>
+    <title>ぽかぽかの星</title>
+    <updated>2020-05-08T16:20:33.071Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://github.com/makersmelx"/>
+    <link rel="self" href="https://github.com/makersmelx/atom.xml"/>
+    <subtitle>假药，随手想起来的时候就随手写一点...的个人网页</subtitle>
+    <logo>https://github.com/makersmelx/images/avatar.png</logo>
+    <icon>https://github.com/makersmelx/favicon.ico</icon>
+    <rights>All rights reserved 2020, ぽかぽかの星</rights>
+    <entry>
+        <title type="html"><![CDATA[React单元测试 Jest+Enzyme]]></title>
+        <id>https://github.com/makersmelx/post/react-dan-yuan-ce-shi-jestenzyme/</id>
+        <link href="https://github.com/makersmelx/post/react-dan-yuan-ce-shi-jestenzyme/">
+        </link>
+        <updated>2020-05-08T16:16:57.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="0-背景">0. 背景</h3>
+<p>事情的起因是老板要我测试刚写的web前端。起因的起因是，实习的core OS组，老板安排我去写web前端。面试我的时候没问我这方面的东西...我也不会...</p>
+<p>写的时候2020年5月6日。</p>
+<p>项目基于React。</p>
+<h3 id="1-使用的库">1. 使用的库</h3>
+<ul>
+<li>Jest</li>
+<li>Enzyme</li>
+</ul>
+<p>jest是测试的框架。Enzyme是用于在测试中渲染React组件的库。</p>
+<h3 id="2-安装依赖项">2. 安装依赖项</h3>
+<pre><code class="language-shell">yarn add --dev jest
+# using React 16
+yarn add --dev enzyme enzyme-adapter-react-16
+</code></pre>
+<h3 id="3-测试用react-app">3. 测试用React App</h3>
+<h4 id="appjs">App.js</h4>
+<pre><code class="language-react">// App.js
+import React from 'react';
+import axios from 'axios';
+
+export const dataReducer = (state, action) =&gt; {
+    if (action.type === 'SET_ERROR') {
+        return {...state, list: [], error: true};
+    }
+
+    if (action.type === 'SET_LIST') {
+        return {...state, list: action.list, error: null};
+    }
+
+    throw new Error();
+};
+
+const initialData = {
+    list: [],
+    error: null,
+};
+
+const App = () =&gt; {
+    const [counter, setCounter] = React.useState(0);
+    const [data, dispatch] = React.useReducer(dataReducer, initialData);
+
+    React.useEffect(() =&gt; {
+        axios
+            .get('http://hn.algolia.com/api/v1/search?query=react')
+            .then(response =&gt; {
+                dispatch({type: 'SET_LIST', list: response.data.hits});
+            })
+            .catch(() =&gt; {
+                dispatch({type: 'SET_ERROR'});
+            });
+    }, []);
+
+    return (
+        &lt;div&gt;
+            &lt;h1&gt;My Counter&lt;/h1&gt;
+            &lt;Counter counter={counter}/&gt;
+
+            &lt;button type=&quot;button&quot; onClick={() =&gt; setCounter(counter + 1)}&gt;
+                Increment
+            &lt;/button&gt;
+
+            &lt;button type=&quot;button&quot; onClick={() =&gt; setCounter(counter - 1)}&gt;
+                Decrement
+            &lt;/button&gt;
+
+            &lt;h2&gt;My Async Data&lt;/h2&gt;
+
+            {data.error &amp;&amp; &lt;div className=&quot;error&quot;&gt;Error&lt;/div&gt;}
+
+            &lt;ul&gt;
+                {data.list.map(item =&gt; (
+                    &lt;li key={item.objectID}&gt;{item.title}&lt;/li&gt;
+                ))}
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    );
+};
+
+export const Counter = ({counter}) =&gt; (
+    &lt;div&gt;
+        &lt;p&gt;{counter}&lt;/p&gt;
+    &lt;/div&gt;
+);
+
+export default App;
+</code></pre>
+<h4 id="indexjs">index.js</h4>
+<pre><code class="language-react">// index.js
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+import App from './App';
+
+ReactDOM.render(&lt;App /&gt;, document.getElementById('app'));
+</code></pre>
+<h3 id="4-测试环境配置">4. 测试环境配置</h3>
+<p>jest运行开始时，我们选择让它读取预先的设置。其中包括，如何寻找所有有test case的js文件，如何import所有的测试依赖项，如何识别React的jsx语法等（因为jest默认只支持plain JavaScript）。</p>
+<ol>
+<li>在项目根目录，<code>touch jest.setup.js</code>。</li>
+</ol>
+<pre><code class="language-js">// jest.setup.js
+import {configure} from 'enzyme'
+import Adapter from 'enzyme-adapter-react-16'
+
+configure({adapter: new Adapter()});
+</code></pre>
+<ol start="2">
+<li>在项目根目录，<code>touch jest.config.json</code>。</li>
+</ol>
+<pre><code class="language-json">{
+  &quot;testRegex&quot;: &quot;((\\.|/*.)(test))\\.js?$&quot;,
+  &quot;setupFilesAfterEnv&quot;: [
+    &quot;&lt;rootDir&gt;/jest.setup.js&quot;
+  ]
+}
+</code></pre>
+<ul>
+<li>
+<p>testRegex：jest寻找有test case文件的规则</p>
+</li>
+<li>
+<p>setupFilesAfterEnv：jest会在每次测试开始前，运行这个js文件。</p>
+</li>
+</ul>
+<ol start="3">
+<li>在项目根目录，<code>touch .babelrc</code></li>
+</ol>
+<pre><code class="language-json">{
+  &quot;env&quot;: {
+    &quot;test&quot;: {
+      &quot;presets&quot;: [
+        &quot;@babel/preset-env&quot;,
+        &quot;@babel/preset-react&quot;
+      ]
+    }
+  }
+}
+</code></pre>
+<ol start="3">
+<li>编辑<code>package.json</code></li>
+</ol>
+<pre><code class="language-json">...
+&quot;scripts&quot;: {
+    ...
+    &quot;test&quot;: &quot;node_modules/.bin/jest --config ./jest.config.json&quot;,
+    &quot;test:watch&quot;: &quot;npm run test -- --watch&quot;,
+    ...
+  },
+...
+</code></pre>
+<p>改动之后，可以使用<code>yarn test</code>启动所有测试</p>
+<h3 id="5-一个基础的test-suite">5. 一个基础的test suite</h3>
+<h4 id="srcapptestjs">src/App.test.js</h4>
+<pre><code class="language-react">// App.test.js
+import React from 'react';
+import renderer from 'react-test-renderer';
+import {mount} from 'enzyme';
+
+import App, {Counter} from './App';
+
+describe('Test title', () =&gt; {
+    ...
+});
+
+</code></pre>
+<p>省略号的地方写test case</p>
+<h3 id="6-snapshot-test">6. Snapshot test</h3>
+<p>Snapshot test会给app的某个时刻的界面截图，例如如下的形式保存，姑且称他为组件树</p>
+<pre><code>// App.test.js.snap
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Counter snapshot renders 1`] = `
+&lt;div&gt;
+  &lt;p&gt;
+    1
+  &lt;/p&gt;
+&lt;/div&gt;
+`;
+
+</code></pre>
+<p>测试通过比较app当前状态的组件树和储存的当前状态的截图组件树，判断组件是否正常。暂时不太想用这个，先略过了。</p>
+<h4 id="srcapptestjs-2">src/App.test.js</h4>
+<pre><code class="language-react">import React from 'react';
+import renderer from 'react-test-renderer';
+import {mount} from 'enzyme';
+
+import App, {Counter} from './App';
+
+describe('Counter', () =&gt; {
+    test('snapshot renders', () =&gt; {
+        const component = renderer.create(&lt;Counter counter={1}/&gt;);
+        let tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+    });
+});
+
+
+</code></pre>
+<h3 id="7-interactive-component-test">7. interactive component test</h3>
+<p>测试增减的两个按钮</p>
+<pre><code class="language-react">// App.test.js
+...
+describe('Counter', () =&gt; {
+		...
+    it('increments the counter', () =&gt; {
+        const wrapper = mount(&lt;App /&gt;);
+
+        wrapper
+            .find('button')
+            .at(0)
+            .simulate('click');
+
+        const counterWrapper = wrapper.find(Counter);
+        expect(counterWrapper.find('p').text()).toBe('1');
+    });
+  
+  
+    it('decrements the counter', () =&gt; {
+      const wrapper = mount(&lt;App /&gt;);
+
+      wrapper
+        .find('button')
+        .at(1)
+        .simulate('click');
+
+      const counterWrapper = wrapper.find(Counter);
+      expect(counterWrapper.find('p').text()).toBe('-1');
+    });
+    ...
+});
+...
+
+</code></pre>
+<p>查询了mocha的文档，我没查到到it和test的区别。先使用it再说。</p>
+<h3 id="8-test-async-function">8. test async function</h3>
+<pre><code class="language-react">it('fetches async data', done =&gt; {
+				// set mock
+        const promise = new Promise((resolve, reject) =&gt;
+            setTimeout(
+                () =&gt;
+                    resolve({
+                        data: {
+                            hits: [
+                                {objectID: '1', title: 'a'},
+                                {objectID: '2', title: 'b'},
+                            ],
+                        },
+                    }),
+                100
+            )
+        );
+
+        axios.get = jest.fn(() =&gt; promise);
+
+        const wrapper = mount(&lt;App/&gt;);
+
+        expect(wrapper.find('li').length).toEqual(0);
+
+        promise.then(() =&gt; {
+          // Update after all the async functions are done
+            setImmediate(() =&gt; {
+                wrapper.update();
+                expect(wrapper.find('li').length).toEqual(2);
+								// clear mock
+                axios.get.mockClear();
+                done();
+            })
+        });
+    });
+
+</code></pre>
+<p>写的这个简单的sample在https://github.com/makersmelx/react-test-learning<br>
+后头还要加一堆....我有一个带了好几个ant design form的页面要测...想想就头大。<br>
+之前看到个报告说40%的前端工程师承认没有用过测试，请带我一个。</p>
+<h3 id="参考">参考</h3>
+<ol>
+<li>
+<p>How to test React with Jest, https://www.robinwieruch.de/react-testing-jest</p>
+</li>
+<li>
+<p>Jest encountered unexpected token with React app, https://github.com/facebook/jest/issues/6933</p>
+</li>
+</ol>
+]]></content>
+    </entry>
+</feed>
