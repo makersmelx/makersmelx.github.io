@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://makersmelx.github.io</id>
     <title>ぽかぽかの星</title>
-    <updated>2020-05-08T16:38:44.464Z</updated>
+    <updated>2020-05-13T13:23:22.722Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://makersmelx.github.io"/>
     <link rel="self" href="https://makersmelx.github.io/atom.xml"/>
@@ -10,6 +10,18 @@
     <logo>https://makersmelx.github.io/images/avatar.png</logo>
     <icon>https://makersmelx.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, ぽかぽかの星</rights>
+    <entry>
+        <title type="html"><![CDATA[天凤六段纪念]]></title>
+        <id>https://makersmelx.github.io/post/tian-feng-liu-duan-ji-nian/</id>
+        <link href="https://makersmelx.github.io/post/tian-feng-liu-duan-ji-nian/">
+        </link>
+        <updated>2020-05-13T13:21:51.000Z</updated>
+        <content type="html"><![CDATA[<p>牌运好了一整周，升六了<br>
+<img src="https://makersmelx.github.io/post-images/1589376166323.jpg" alt="" loading="lazy"><br>
+面板长这个样<br>
+<img src="https://makersmelx.github.io/post-images/1589376145617.png" alt="" loading="lazy"></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[React单元测试 Jest+Enzyme]]></title>
         <id>https://makersmelx.github.io/post/react-dan-yuan-ce-shi-jestenzyme/</id>
