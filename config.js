@@ -33,15 +33,38 @@ module.exports = {
     }],
   experience: [
     {
-      date: 'Sep 2017 - Present',
+      date: 'Jan 2020 - July 2020',
+      icon: 'apple',
+      company: 'Apple Inc.',
+      team: 'CoreOS China',
+      position: 'Software Engineer Intern',
+      work: [
+        'Develop the user interface for an internal tool with React.js ',
+        'Maintain the backend of the internal tool with Django',
+      ],
+    },
+    {
+      date: 'Sep 2020 - Dec 2020',
       icon: 'university',
-      title: 'B.S.E. in Electrical and Computer Engineering',
-      location: 'Shanghai Jiao Tong University, China',
-    }, {
-      date: 'Sep 2014 - Jun 2017',
-      icon: 'school',
-      title: 'High School',
-      location: 'No.2 High School of East China Normal University, China',
+      company: 'Shanghai Jiao Tong University',
+      team: 'Intro to Operating System',
+      position: 'Teaching Assistant',
+      work: [
+        'Customize and maintain a Git service with Gitea',
+        'Grade course projects',
+      ],
+    },
+    {
+      date: 'Sep 2020 - Dec 2020',
+      icon: 'university',
+      company: 'Shanghai Jiao Tong University',
+      team: 'Intro to Algorithm',
+      position: 'Teaching Assistant',
+      work: [
+        'Design assignments on the online judge',
+        'Find and assign interview problems in labs',
+        'Grade exams and all the coursework',
+      ],
     }],
   contactFormUrl: process.env.CONTACT_FORM_ENDPOINT ||
       'https://getform.io/f/09a3066f-c638-40db-ad59-05e4ed71e451',
