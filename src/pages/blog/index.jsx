@@ -5,7 +5,7 @@ import {Layout, Row, Col} from 'antd';
 import Header from '../../components/PageLayout/Header';
 
 import SidebarWrapper from '../../components/PageLayout/Sidebar';
-import PostCard from '../../components/PostCard';
+// import PostCard from '../../components/PostCard';
 import SEO from '../../components/Seo';
 
 const Blog = ({data}) => (
@@ -47,32 +47,32 @@ Blog.propTypes = {
   }).isRequired,
 };
 
-export const query = graphql`
-  {
-    allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { fileAbsolutePath: { regex: "/index.md$/" } }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            date
-            path
-            title
-            tags
-            excerpt
-            cover {
-              childImageSharp {
-                fluid(maxWidth: 288) {
-                  ...GatsbyImageSharpFluid_tracedSVG
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`;
+// export const query = graphql`
+//   {
+//     allMarkdownRemark(
+//       sort: { fields: [frontmatter___date], order: DESC }
+//       filter: { fileAbsolutePath: { regex: "/index.md$/" } }
+//     ) {
+//       edges {
+//         node {
+//           frontmatter {
+//             date
+//             path
+//             title
+//             tags
+//             excerpt
+//             cover {
+//               childImageSharp {
+//                 fluid(maxWidth: 288) {
+//                   ...GatsbyImageSharpFluid_tracedSVG
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `;
 
 export default Blog;
