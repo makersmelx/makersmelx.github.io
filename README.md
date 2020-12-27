@@ -1,6 +1,6 @@
 # makersmelx's Gatsby Personal Website Template for Personal Page
 
-This website (template) is based on [Gatsby's RolwinReevan Portfolio template](https://github.com/rolwin100/rolwinreevan_gatsby_blog) using [ant-design](https://ant.design).
+This website (template) is based on [Gatsby's RolwinReevan Portfolio template](https://github.com/rolwin100/rolwinreevan_gatsby_blog) and [tc-imba.github.io](https://github.com/tc-imba/tc-imba.github.io) using [ant-design](https://ant.design).
 
 ## 🚀 Development
 
@@ -40,7 +40,7 @@ gatsby build
 Then the static website will be built in the `public` folder. You can use Apache or nginx to serve the content.
 
 ## github.io
-
+This part is based on 
 The project also supports automatically deploying through GitHub Actions.
 It is already configured in `.github/workflows/main.yml` and typically you do not need to modify it. The static website will be built on the `gh-pages` branch in your GitHub repo.
 
