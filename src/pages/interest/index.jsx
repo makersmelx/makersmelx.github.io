@@ -1,8 +1,24 @@
 import React from 'react';
-import {Col, Layout, Row} from 'antd';
+import {Layout, Card, Row} from 'antd';
 import Header from '../../components/PageLayout/Header';
 import SEO from '../../components/Seo';
 import SidebarWrapper from '../../components/PageLayout/Sidebar';
+import './index.css';
+
+const InterestCard = (props) => (
+    <Card
+        hoverable
+        className={'interest-card'}
+        {...props}
+        bodyStyle={{
+          'padding': '0 0',
+        }}
+    >
+      <h2 className={'interest-title'}>
+        {props.interestName}
+      </h2>
+    </Card>
+);
 
 const Interest = () => (
     <Layout className="outerPadding">
@@ -17,7 +33,8 @@ const Interest = () => (
           <div className="marginTopTitle">
             <h1 className="titleSeparate">Interest</h1>
           </div>
-          {/*  content here*/}
+          <InterestCard id={'miku'} interestName={'初音ミク'} />
+          <InterestCard id={'wota'} interestName={'ヲタ芸'} />
         </SidebarWrapper>
       </Layout>
     </Layout>

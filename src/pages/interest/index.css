@@ -1,0 +1,41 @@
+.interest-card {
+  border-radius: 15px;
+  border: 4px white solid;
+  height: 200px;
+  min-width: 200px;
+}
+
+.interest-title {
+  margin: 140px 0 0 0;
+  border-radius: 0 0 11px 11px;
+  background: linear-gradient(-45deg, transparent 50%, rgba(0, 0, 0, 0.7) 100%);
+  padding: 10px 0 10px 5%;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+}
+
+#miku {
+  background-image: url("../../images/interests/miku/cover.jpg");
+  background-position-x: 100%;
+  background-position-y: 9%;
+  background-size: cover;
+}
+
+#wota{
+  background-image: url("../../images/interests/wota/cover.jpeg");
+  background-position-y: 59%;
+  background-size: cover;
+}
+
+@media screen and (max-width: 575px) {
+  .interest-title {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  #miku {
+    background-image: url("../../images/interests/miku/cover-small.jpg");
+    background-size: cover;
+  }
+}
+
