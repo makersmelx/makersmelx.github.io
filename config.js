@@ -39,8 +39,9 @@ module.exports = {
       team: 'CoreOS China',
       position: 'Software Engineer Intern',
       work: [
-        'Develop the user interface for an internal tool with React.js ',
-        'Maintain the backend of the internal tool with Django',
+        'Work on a web-based factory tool called Surrogate, which is a Python-based distributed system automating routine tasks.',
+        'Design a new website front end with React',
+        'Manage API and implement task-automation functions on Django',
       ],
     },
     {
