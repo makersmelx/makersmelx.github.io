@@ -6,18 +6,23 @@ import SidebarWrapper from '../../components/PageLayout/Sidebar';
 import './index.css';
 
 const InterestCard = (props) => (
-    <Card
-        hoverable
-        className={'interest-card'}
-        {...props}
-        bodyStyle={{
-          'padding': '0 0',
-        }}
+    <a
+        href={props.url}
+        rel="noopener noreferrer"
     >
-      <h2 className={'interest-title'}>
-        {props.interestName}
-      </h2>
-    </Card>
+      <Card
+          hoverable
+          className={'interest-card'}
+          {...props}
+          bodyStyle={{
+            'padding': '0 0',
+          }}
+      >
+        <h2 className={'interest-title'}>
+          {props.interest}
+        </h2>
+      </Card>
+    </a>
 );
 
 const Interest = () => (
@@ -33,8 +38,8 @@ const Interest = () => (
           <div className="marginTopTitle">
             <h1 className="titleSeparate">Interest</h1>
           </div>
-          <InterestCard id={'miku'} interestName={'初音ミク'} />
-          <InterestCard id={'wota'} interestName={'ヲタ芸'} />
+          <InterestCard id={'miku'} interest={'初音ミク'} url={''} />
+          <InterestCard id={'wota'} interest={'ヲタ芸'} url={'/blog/wota'} />
         </SidebarWrapper>
       </Layout>
     </Layout>

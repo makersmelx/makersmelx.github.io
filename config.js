@@ -8,10 +8,16 @@ module.exports = {
   defaultLanguage: 'en',
   disqusScript: process.env.DISQUS_SCRIPT ||
       'https://rolwinreevan.disqus.com/embed.js',
+  aboutMe: [
+    `Hello. My name is Jiayao (Mike) Wu (He, him, his). I am currently a ECE senior at Shanghai Jiao Tong University.`,
+    `I am stepping forward to become a software engineer.`,
+    `For informal part, please refer to Interest page. Contents of my personal interest may be written in Chinese or Japanese.`,
+  ],
   pages: {
     about: '/',
     interest: '/interest',
     blog: '/blog',
+    tags: '/tags',
   },
   social: {
     github: 'https://github.com/makersmelx',
@@ -91,11 +97,6 @@ module.exports = {
       description: 'React is an open source JavaScript library used for designing user interfaces.',
       color: '#61dbfa',
     },
-    gatsby: {
-      name: 'Gatsby.js',
-      description: 'A framework built over ReactJS to generate static page web application.  ',
-      color: '#6f309f',
-    },
     html: {
       name: 'HTML',
       description: 'A markup language that powers the web. All websites use HTML for structuring the content.',
@@ -111,6 +112,10 @@ module.exports = {
       description: 'A general purpose programming language that is widely used for developing various applications.',
       color: '#f9c646',
     },
-
+    wota: {
+      name: 'wota',
+      description: 'a sll',
+      color: '#f9c646',
+    },
   },
 };

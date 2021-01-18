@@ -33,19 +33,21 @@ const DomContent = () => (
           {
             (Object.entries(Config.social)).map(link => {
               return (
-                  <a href={link[1]} target="_blank" label="button"
-                     rel="noopener noreferrer"><FA name={link[0]} /></a>
+                  <a href={link[1]} key={link[0]} target="_blank" label="button"
+                     rel="noopener noreferrer">
+                    <FA name={link[0]} />
+                  </a>
               );
             })
           }
         </div>
         <ul className={`box ${style.badge} contactBlock`}>
-          <li className={`${style.contactBlockItem}`}>
+          <li className={`${style.contactBlockItem}`} id={'location'}>
             <span><FeatherIcon size="19" icon="map-pin" /></span>
             {' '}
             Shanghai, China
           </li>
-          <li className={`${style.contactBlockItem}`}>
+          <li className={`${style.contactBlockItem}`} id={'メール'}>
             <span><FeatherIcon size="19" icon="mail" /></span>
             {' '}
             <a
@@ -57,7 +59,8 @@ const DomContent = () => (
           </li>
         </ul>
         <div className={style.resumeDownload}>
-          <a href="../Jiayao_Wu_Resume.pdf" download target="_blank">Download CV</a>
+          <a href="../Jiayao_Wu_Resume.pdf" download target="_blank">Download
+            CV</a>
         </div>
       </div>
     </aside>

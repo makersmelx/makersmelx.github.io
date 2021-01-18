@@ -14,6 +14,8 @@ const generateEducationTimeline = (data) => (
         style={{fontSize: '12pt', fontWeight: '300'}}
         // icon={<FA name={data.icon} />}
         iconStyle={{cursor: 'default'}}
+        key={data.title}
+
     />
 );
 
@@ -29,15 +31,16 @@ const generateWorkTimeline = (data) => (
         iconStyle={{cursor: 'default'}}
         contentStyle={{
           'padding': '0em 0em',
-          'box-shadow': 'none',
+          'boxShadow': 'none',
           'margin': '0.8em 0em',
         }}
+        key={data.company}
     >
       <ul>
         {
-          data.work.map(item => {
+          (data.work).map(item => {
             return (
-                <li>{item}</li>
+                <li key={item}>{item}</li>
             );
           })
         }

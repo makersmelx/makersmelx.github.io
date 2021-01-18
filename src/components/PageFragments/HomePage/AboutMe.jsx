@@ -1,17 +1,14 @@
 import React from 'react';
-import {Row, Col} from 'antd';
-import AboutTile from '../../AbouTile';
 import {stripTags, domHtml} from '../../../utils/stripTags';
-
+import config from '../../../../config';
 import SEO from '../../Seo';
 
-const pageText = {
-  paraOne: `Hello !! My name is Jiayao (Mike) Wu (He, him, his). I am currently a ECE senior at Shanghai Jiao Tong University.`,
-  paraTwo: `Blablabla...`,
-};
-
 const AboutMe = () => {
-  const description = `${pageText.paraOne} ${stripTags(pageText.paraTwo)}`;
+  let description = '';
+  (config.aboutMe).forEach((para) => {
+    description = description + para;
+  });
+  description = stripTags(description);
   return (
       <>
         <div>
@@ -28,10 +25,13 @@ const AboutMe = () => {
               ]}
           />
           <h1 className="titleSeparate">About Me</h1>
-          <p>
-            {pageText.paraOne}
-          </p>
-          <p dangerouslySetInnerHTML={domHtml(pageText.paraTwo)} />
+          {
+            config.aboutMe.map((para, index) => {
+              return (
+                  <p key={index}>{para}</p>
+              );
+            })
+          }
         </div>
         {/*<Row gutter={[20, 20]}>*/}
         {/*  <Col xs={24} sm={24} md={12} lg={8}>*/}
