@@ -1,0 +1,86 @@
+/*You may not modify any of this code*/
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+  background-color: #737373;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+a.skip {
+  background: white;
+  left: 0;
+  padding: 6px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+}
+
+header{
+  background: #fff;
+  border-bottom: 3px solid #50C7C7;
+}
+
+#logo{
+  position: relative;
+  height:50px;
+}
+
+
+
+h1{
+  font-size: 50px;
+  line-height: 1;
+  padding: 50px 0;
+  text-align: center;
+}
+
+h2{
+  font-size: 32px;
+  line-height: 1.5;
+}
+
+nav{
+  padding: 25px 0; 
+  font-size:150%;     
+}
+
+nav a{
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+*:focus{
+  border: 2px solid black;
+}
+
+p{
+  padding:10px;
+}
+
+.intro p{
+  color: white;
+  font-size: 24px;
+  text-align: center;
+}
+
+
+.text-block{
+    background-color: rgba(255, 255, 255, .8);
+    border: 10px solid black;
+    padding: 30px;
+    min-height:250px;
+  }
+
+footer{
+  background-color: black;
+  color: white;
+  padding-top: 15px;
+  text-align: center;
+}
+
