@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://makersmelx.github.io/sitemap.xml
-Host: https://makersmelx.github.io
+Sitemap: https://jiayao.me/sitemap.xml
+Host: https://jiayao.me
