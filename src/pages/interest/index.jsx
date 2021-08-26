@@ -1,8 +1,8 @@
 import React from 'react';
 import {Layout, Card, Row} from 'antd';
-import Header from '../../components/PageLayout/Header';
+import Header from '../../components/Header';
 import SEO from '../../components/Seo';
-import SidebarWrapper from '../../components/PageLayout/Sidebar';
+import SidebarWrapper from '../../components/Sidebar';
 import './index.css';
 
 const InterestCard = (props) => (

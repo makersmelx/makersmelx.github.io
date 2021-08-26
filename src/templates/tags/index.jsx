@@ -9,9 +9,9 @@ import {
 } from 'antd';
 /* App imports */
 import SEO from '../../components/Seo';
-import Header from '../../components/PageLayout/Header';
+import Header from '../../components/Header';
 import PostCard from '../../components/PostCard';
-import SidebarWrapper from '../../components/PageLayout/Sidebar';
+import SidebarWrapper from '../../components/Sidebar';
 import Config from '../../../config';
 import Utils from '../../utils/pageUtils';
 import style from './tags.module.less';

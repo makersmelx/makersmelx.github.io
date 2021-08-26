@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {graphql} from 'gatsby';
 import {Layout, Row, Col} from 'antd';
-import Header from '../../components/PageLayout/Header';
+import Header from '../../components/Header';
 
-import SidebarWrapper from '../../components/PageLayout/Sidebar';
+import SidebarWrapper from '../../components/Sidebar';
 import PostCard from '../../components/PostCard';
 import SEO from '../../components/Seo';
 
