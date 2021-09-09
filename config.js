@@ -19,28 +19,29 @@ module.exports = {
   aboutMe: [
     `Hello. My name is Jiayao (Mike) Wu (He, him, his). I am a graduate of Information Science at University of Michigan.`,
     `I have attached my resume in this website. Please refer to Download CV in the left column.`,
-    `I also would like to share with you some of my hobbies in Chinese and Japanese.`
+    `I would like to share some fun facts in Chinese and Japanese.`
   ],
+  resume: 'Jiayao\ Wu\ Resume.pdf',
   // side bar contacts
   social: {
     github: 'https://github.com/makersmelx',
     twitter: 'https://twitter.com/makersmelx',
     telegram: 'https://t.me/Makersmelx',
-    linkedin: 'https://www.linkedin.com/in/jiayao-wu-97a112188/'
+    linkedin: 'https://www.linkedin.com/in/jiayaowu/'
   },
   // education
   education: [
     {
-      date: 'Aug 2021 - Present',
+      date: 'Aug. 2021 - Present',
       icon: 'university',
-      title: 'M.S. in Information',
+      title: 'Master of Science in Information',
       location: 'University of Michigan, Ann Arbor, MI'
     },
     {
-      date: 'Sep 2017 - Aug 2021',
+      date: 'Sept. 2017 - Aug. 2021',
       icon: 'university',
       title: 'B.S.E. in Electrical and Computer Engineering',
-      location: 'Shanghai Jiao Tong University, China'
+      location: 'Shanghai Jiao Tong University, Shanghai, China'
     },
     {
       date: 'Sep 2014 - Jun 2017',
@@ -57,8 +58,8 @@ module.exports = {
       team: 'CoreOS China',
       position: 'Software Engineer Intern',
       work: [
-        'Developed an internal tool that automates routine tasks at manufacturing lines.',
-        'Collected and analyzed usage statistics from multiple factories and offices.'
+        'Developed an internal web application with React and Django that automates routine tasks by saving 2 hours per task and was used by multiple teams and factories across China',
+        'Collected and analyzed usage statistics, highlighted in the team’s annual report'
       ]
     },
     {
@@ -68,23 +69,12 @@ module.exports = {
       team: 'UM-SJTU Joint Institute',
       position: 'Teaching Assistant',
       work: [
-        'Hosted review classes and discussion sections.',
-        'Designed and graded assignments, coding works and exams.',
-        'Advised students on coding and assignments.'
+        'Hosted review sessions and discussion sessions.',
+        'Prepared new assignments in modern C++, wrote detailed specification',
+        'Programmed Python scripts to automate grading scripts, used in 4 courses.'
       ]
-    },
-    {
-      date: 'Apr 2018 - Jul 2021',
-      icon: 'network',
-      company: 'Shanghai Jiao Tong University',
-      team: 'Network & Information Management Organization',
-      position: 'Assistant Director/ Network Specialist',
-      work: [
-        'Assisted students with usage of dorm network and troubleshot problems.',
-        'Supervised the team’s daily operations and organized the annual recruitment.',
-        'Maintained network facilities across the campus.'
-      ]
-    }],
+    }
+  ],
   contactFormUrl: process.env.CONTACT_FORM_ENDPOINT ||
     'https://getform.io/f/09a3066f-c638-40db-ad59-05e4ed71e451',
   googleAnalyticTrackingId: process.env.GA_TRACKING_ID || '',
