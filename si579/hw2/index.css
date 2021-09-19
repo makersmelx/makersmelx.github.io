@@ -1,0 +1,56 @@
+body {
+  margin: 0 7%;
+  background-image: url("static/bg.png");
+  animation-name: change-bg;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-delay: 2s;
+  animation-direction: alternate-reverse;
+}
+
+main, header {
+  padding: 0 3%;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+ul{
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.h1-title {
+  text-align: center;
+  font-family: 'Tangerine', serif;
+  font-size: 48px;
+}
+
+p {
+  size: 18px;
+  color: darkcyan;
+}
+
+#resume {
+  width: 100%;
+  height: 800px;
+}
+
+#cat {
+  width: 60%;
+  text-align: center;
+}
+
+#about-me {
+  background-color: lightyellow;
+}
+
+
+@keyframes change-bg {
+  0% {
+    background-image: url("static/bg.png");
+  }
+  50% {
+    background-image: url("static/bg2.jpg");
+
+  }
+}
