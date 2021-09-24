@@ -14,7 +14,7 @@ module.exports = {
     experience: '/experience',
     portfolio: '/portfolio',
     'Fun Facts': '/funFacts',
-    blog: '/blog',
+    // blog: '/blog',
     // tags: '/tags'
   },
   // about me
