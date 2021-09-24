@@ -13,7 +13,7 @@ module.exports = {
     about: '/',
     experience: '/experience',
     portfolio: '/portfolio',
-    'Fun Facts': '/funFacts',
+    // 'Fun Facts': '/funFacts',
     // blog: '/blog',
     // tags: '/tags'
   },
