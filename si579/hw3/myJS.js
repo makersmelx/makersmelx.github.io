@@ -10,11 +10,18 @@
 
 const colorBlock = document.getElementById('color-block');
 const currentColor = colorBlock.style.backgroundColor;
+const currentColorDisplay = document.getElementById('color-name').textContent;
 colorBlock.addEventListener('click', () => {
-  colorBlock.style.backgroundColor =
-    colorBlock.style.backgroundColor === currentColor
-      ? '#39C5BB'
-      : currentColor;
+
+  if (colorBlock.style.backgroundColor === currentColor) {
+    colorBlock.style.backgroundColor = '#39C5BB';
+    document.getElementById('color-name').textContent =
+      '#39C5BB';
+  } else {
+    colorBlock.style.backgroundColor = currentColor;
+    document.getElementById('color-name').textContent =
+      currentColorDisplay;
+  }
 });
 
 /*
