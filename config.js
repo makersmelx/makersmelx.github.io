@@ -58,8 +58,11 @@ module.exports = {
       team: 'CoreOS China',
       position: 'Software Engineer Intern',
       work: [
-        'Developed an internal web application with React and Django that automates routine tasks by saving 2 hours per task and was used by multiple teams and factories across China',
-        'Collected and analyzed usage statistics, highlighted in the team’s annual report'
+        'Joined CoreOS China team, working on an internal tool that automates routine tasks at Apple’s manufacturing lines in China.',
+        'Implemented the front end that allows users to create template or customized workflows for routine manufacturing tasks.',
+        'Designed the user interface, providing a streamlined experience to build and modify workflows.',
+        'Evaluated data and visualized in Python such as line charts of monthly usage.',
+        'Improved the team’s productivity by saving an average of 4 hours per workflow.'
       ]
     },
     {
