@@ -1,9 +1,8 @@
-import React from 'react';
 import { Layout } from 'antd';
 import Header from '../../components/Header';
-
 import SidebarWrapper from '../../components/Sidebar';
-import AboutMe from './AboutMe';
+import Experience from './Experience';
+import React from 'react';
 
 const Index = () => {
   return (
@@ -12,8 +11,10 @@ const Index = () => {
         <Header />
         <SidebarWrapper>
           <>
-            <h1 className="titleSeparate">About Me</h1>
-            <AboutMe />
+            <div className="marginTopTitle">
+              <h1 className="titleSeparate">Experience & Education</h1>
+            </div>
+            <Experience />
           </>
         </SidebarWrapper>
       </Layout>

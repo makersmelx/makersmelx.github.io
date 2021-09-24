@@ -24,7 +24,6 @@ const AboutMe = () => {
             'NodeJS'
           ]}
         />
-        <h1 className="titleSeparate">About Me</h1>
         {
           config.aboutMe.map((para, index) => {
             return (

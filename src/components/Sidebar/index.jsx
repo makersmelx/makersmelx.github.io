@@ -52,7 +52,7 @@ const DomContent = () => (
         <a
           href={Config.resume}
           target="_blank">
-          Download CV
+          Download Resume
         </a>
       </div>
     </div>

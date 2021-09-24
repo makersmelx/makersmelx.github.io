@@ -11,15 +11,19 @@ module.exports = {
   // route
   pages: {
     about: '/',
-    interest: '/interest',
-    blog: '/blog',
-    tags: '/tags'
+    experience: '/experience',
+    portfolio: '/portfolio',
+    'Fun Facts': '/funFacts'
+    // blog: '/blog',
+    // tags: '/tags'
   },
   // about me
   aboutMe: [
-    `Hello. My name is Jiayao (Mike) Wu (He, him, his). I am a graduate of Information Science at University of Michigan.`,
-    `I have attached my resume in this website. Please refer to Download CV in the left column.`,
-    `I would like to share some fun facts in Chinese and Japanese.`
+    `Hello friendly strangers, I am Mike.`,
+    'I am a first-year master student studying information science at University of Michigan.',
+    'My areas of interest are software engineering and interaction design.',
+    'I earned my Bachelor\'s Degree in Electrical and Computer Engineering at Shanghai Jiao Tong University.',
+    'I was a software engineer intern at Apple.'
   ],
   resume: 'Jiayao\ Wu\ Resume.pdf',
   // side bar contacts
@@ -78,6 +82,25 @@ module.exports = {
       ]
     }
   ],
+  portfolio: [
+    {
+      name: 'Joint Online Judge',
+      url: 'https://joj.sjtu.edu.cn',
+      color: 'black',
+      description: [
+        'Active Maintainer & Front End Developer.',
+        'The official online judge for UM-SJTU Joint Institute at Shanghai Jiao Tong University.'],
+      img: 'portfolio/JOJ.png'
+    },
+    {
+      name: 'FOCS Git Server',
+      url: 'https://focs.sjtu.edu.cn/git',
+      color: 'black',
+      description: [
+        'Maintainer & Developer.',
+        'The self-hosted Git Service for UM-SJTU Joint Institute at Shanghai Jiao Tong University.'],
+      img: 'portfolio/GITEA.png'
+    }],
   contactFormUrl: process.env.CONTACT_FORM_ENDPOINT ||
     'https://getform.io/f/09a3066f-c638-40db-ad59-05e4ed71e451',
   googleAnalyticTrackingId: process.env.GA_TRACKING_ID || '',

@@ -3,7 +3,7 @@ import { Layout } from 'antd';
 import Header from '../../components/Header';
 
 import SidebarWrapper from '../../components/Sidebar';
-import AboutMe from './AboutMe';
+import Portfolio from './Portfolio';
 
 const Index = () => {
   return (
@@ -12,8 +12,8 @@ const Index = () => {
         <Header />
         <SidebarWrapper>
           <>
-            <h1 className="titleSeparate">About Me</h1>
-            <AboutMe />
+            <h1 className="titleSeparate">Portfolio</h1>
+            <Portfolio />
           </>
         </SidebarWrapper>
       </Layout>
