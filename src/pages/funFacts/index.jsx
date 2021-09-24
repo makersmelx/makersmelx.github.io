@@ -29,11 +29,6 @@ const Interest = () => (
   <Layout className="outerPadding">
     <Layout className="container">
       <Header />
-      <SEO
-        title="Fun Facts"
-        description=""
-        path="funFacts"
-      />
       <SidebarWrapper>
         <div className="marginTopTitle">
           <h1 className="titleSeparate">Fun Facts</h1>

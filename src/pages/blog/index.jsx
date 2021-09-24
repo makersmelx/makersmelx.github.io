@@ -12,11 +12,6 @@ const Blog = ({data}) => (
     <Layout className="outerPadding">
       <Layout className="container">
         <Header />
-        <SEO
-            title="Blog"
-            description=""
-            path="blog"
-        />
         <SidebarWrapper>
           <div className="marginTopTitle">
             <h1 className="titleSeparate">Blog</h1>

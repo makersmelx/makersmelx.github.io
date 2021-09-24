@@ -12,18 +12,6 @@ const AboutMe = () => {
   return (
     <>
       <div>
-        <SEO
-          title="About"
-          description={description}
-          path=""
-          keywords={[
-            'Jiayao',
-            'Mike',
-            'Javascript',
-            'ReactJS',
-            'NodeJS'
-          ]}
-        />
         {
           config.aboutMe.map((para, index) => {
             return (
