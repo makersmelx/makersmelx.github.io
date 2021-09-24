@@ -1,0 +1,16 @@
+body{
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+}
+
+#color-block{
+    width: 200px;
+    height: 200px;
+    background-color: #F08080;
+}
+
+#center-text{
+    padding-top: 95px;
+    padding-left: 15px;
+}
