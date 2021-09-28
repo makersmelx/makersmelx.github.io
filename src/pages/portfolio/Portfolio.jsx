@@ -7,7 +7,7 @@ const Index = () => {
   return (
     <>
       <Row
-        justify={'space-around'}
+        justify="left"
         gutter={[8, 24]}
       >
         {Config.portfolio.map(proj => (

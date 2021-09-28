@@ -12,7 +12,7 @@ module.exports = {
   pages: {
     about: '/',
     experience: '/experience',
-    portfolio: '/portfolio',
+    portfolio: '/portfolio'
     // 'Fun Facts': '/funFacts',
     // blog: '/blog',
     // tags: '/tags'
@@ -100,6 +100,15 @@ module.exports = {
         'Maintainer & Developer.',
         'The self-hosted Git Service for UM-SJTU Joint Institute at Shanghai Jiao Tong University.'],
       img: 'portfolio/GITEA.png'
+    }, {
+      name: 'Zelda (Unity Remaster)',
+      url: 'https://jiayao.me/eecs494/p1',
+      color: 'black',
+      description: [
+        'Coursework of EECS 494: Introduction to Game Development.',
+        'Re-implement The Legend of Zelda (NES) with Unity and custom a new level in the game. '
+      ],
+      img: 'portfolio/eecs494p1.png'
     }],
   contactFormUrl: process.env.CONTACT_FORM_ENDPOINT ||
     'https://getform.io/f/09a3066f-c638-40db-ad59-05e4ed71e451',
