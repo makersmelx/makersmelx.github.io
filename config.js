@@ -106,7 +106,7 @@ module.exports = {
       color: 'black',
       description: [
         'Coursework of EECS 494: Introduction to Game Development.',
-        'Re-implement The Legend of Zelda (NES) with Unity and custom a new level in the game. '
+        'Re-implement The Legend of Zelda (1986 NES) with Unity and custom a new level in the game. '
       ],
       img: 'portfolio/eecs494p1.png'
     }],
