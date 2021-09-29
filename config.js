@@ -21,9 +21,10 @@ module.exports = {
   aboutMe: [
     `Hello friendly strangers, I am Mike.`,
     'I am a first-year master student studying information science at University of Michigan.',
-    'My areas of interest are software engineering and interaction design.',
     'I earned my Bachelor\'s Degree in Electrical and Computer Engineering at Shanghai Jiao Tong University.',
-    'I was a software engineer intern at Apple.'
+    'I was a software engineer intern at Apple.',
+    'My areas of interest are software engineering and interaction design.',
+    'I am always seeking to work on amazing things that connect people with joy and inspiration.',
   ],
   resume: 'Jiayao\ Wu\ Resume.pdf',
   // side bar contacts
