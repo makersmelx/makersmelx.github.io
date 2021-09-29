@@ -95,7 +95,7 @@ module.exports = {
     },
     {
       name: 'FOCS Git Server',
-      url: 'https://focs.sjtu.edu.cn/git',
+      url: 'https://focs.ji.sjtu.edu.cn/git',
       color: 'black',
       description: [
         'Maintainer & Developer.',
