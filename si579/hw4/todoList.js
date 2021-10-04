@@ -10,7 +10,7 @@ document.getElementById('add_task').addEventListener('click', () => {
 
   const due = document.createElement('span');
   due.appendChild(
-    document.createTextNode(`due ${task.dueDate} ${task.dueTime}`));
+    document.createTextNode(task.dueDate?`due ${task.dueDate} ${task.dueTime}`:''));
   due.className = 'due';
 
   const button = document.createElement('button');
