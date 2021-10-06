@@ -1,5 +1,5 @@
 const taskList = document.getElementById('task_list');
-document.getElementById('add_task').addEventListener('click', () => {
+const addTask = () => {
   const task = {
     description: document.getElementById('task_description_input').value,
     dueDate: document.getElementById('duedate_input').value,
@@ -10,7 +10,8 @@ document.getElementById('add_task').addEventListener('click', () => {
 
   const due = document.createElement('span');
   due.appendChild(
-    document.createTextNode(task.dueDate?`due ${task.dueDate} ${task.dueTime}`:''));
+    document.createTextNode(
+      task.dueDate ? `due ${task.dueDate} ${task.dueTime}` : ''));
   due.className = 'due';
 
   const button = document.createElement('button');
@@ -26,6 +27,15 @@ document.getElementById('add_task').addEventListener('click', () => {
   taskList.appendChild(newTask);
 
   document.getElementById('task_description_input').value = '';
+};
+document.getElementById('add_task').addEventListener('click', addTask);
+document.addEventListener('keydown', (event) => {
+  if (event.code === 'Enter') {
+    addTask();
+  }
 });
+
+
+
 
 
