@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>SI 579 Midterm 1</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script src="js/problem_1.js" defer></script>
+  <script src="js/problem_2.js" defer></script>
+  <script src="js/problem_3.js" defer></script>
+  <script src="js/problem_4.js" defer></script>
+  <script src="js/problem_5.js" defer></script>
+</head>
+<body>
+<header class="container">
+  <div class="row"><h1 class="col">SI 579 Midterm 1</h1></div>
+  <div class="row">
+    <div class="col exam instructions">
+      <p>Complete all of the questions below. <strong>You should only need to edit the files under the <code>js/</code>
+        directory.</strong> If you have any questions, please ask them via Slack in the #si-579-f21 channel.</p>
+      <p>When you are done, upload your code to GitHub and post the link to your code on Canvas (under <a
+        href="https://umich.instructure.com/courses/475967/assignments/1536502" target="_blank">the Midterm 1
+        assignment</a>).</p>
+    </div>
+  </div>
+  <div class="row" id="time-left">
+    <div class="col-md-6">
+      <label for="exam-due-date">Turn your exam in by:</label>
+      <input id="exam-due-date" type="date" value="2021-10-13" />
+      <input id="exam-due-time" type="time" value="16:05" />
+    </div>
+    <div class="col-md-6">
+      <output id="exam-time-left" class="float-end"></output>
+    </div>
+  </div>
+</header>
+<main>
+  <section class="container" id="problem-1">
+    <div class="row">
+      <h2 class="col">Problem 1</h2>
+    </div>
+    <div class="row">
+      <div class="col problem instructions">
+        <p>The code in the file <code>js/problem_1.js</code> is supposed to display the message "You clicked the
+          button!" when the user clicks the blue button. However, it does not work properly. The buggy code displays the
+          message
+          <emph>before</emph>
+          the user clicks the button.
+        </p>
+        <p>Edit <code>js/problem_1.js</code> to fix the buggy code by making as few changes as possible. This should
+          require a very minimal edit (changing fewer than five characters).</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="sample-output col not-showing-output">
+        <button type="button" class="btn btn-sm btn-outline-secondary">Show a GIF of the desired result</button>
+        <img src="images/problem_1.gif" />
+      </div>
+    </div>
+    <div class="execution row">
+      <div class="col-md-2">
+        <button class="btn btn-lg btn-primary" id="clickable-button" type="button">Click me</button>
+      </div>
+      <div class="col-md-10" id="clicked-feedback"></div>
+    </div>
+  </section>
+  <section class="container" id="problem-2">
+    <div class="row">
+      <h2 class="col">Problem 2</h2>
+    </div>
+    <div class="row">
+      <div class="col problem instructions">
+        <p>Edit the the file <code>js/problem_2.js</code> to add functionality where the user can change the number in
+          the input box and "You added
+          <emph>{num}</emph>
+          thing(s)" shows up in the element below it.
+        </p>
+        <p>In order to do this, your code should listen for <a target="_blank"
+                                                               href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/input_event">the
+          <code>'input'</code> event</a> on the <code>&lt;input /&gt;</code> element. We have written code to get you
+          started by defining (in <code>problem_2.js</code>):</p>
+        <ul>
+          <li><code>thingInput</code> A reference to the <code>&lt;input /&gt;</code> element</li>
+          <li><code>thingCountOutput</code> A reference to the element you can use to write output</li>
+          <li><code>addS</code> A function that helps pluralize a number by returning if an 's' should be added to the
+            end.
+          </li>
+        </ul>
+        <p>Your code should handle plural rules properly. For example, if <code>thingInput.value</code> is
+          <code>1</code>, <code>thingCountOutput.textContent</code> should be <em>"You added 1 thing"</em>. If <code>thingInput.value</code>
+          is <code>2</code>, <code>thingCountOutput.textContent</code> should be <em>"You added 2
+            thing<strong>s</strong>"</em>. The <code>addS</code> function can help you do this.</p>
+        <p>Your code does not need to handle cases where the user entered something other than a number. You can use <a
+          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt"
+          target="_blank">the <code>parseInt()</code> function</a> to convert a string to an integer.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="sample-output col not-showing-output">
+        <button type="button" class="btn btn-sm btn-outline-secondary">Show a GIF of the desired result</button>
+        <img src="images/problem_2.gif" />
+      </div>
+    </div>
+    <div class="execution row">
+      <div class="col">
+        <label for="thing-num-input">How many things?</label>
+        <input id="thing-num-input" type="number" value="0" />
+        <div id="thing-count"></div>
+      </div>
+    </div>
+  </section>
+  <section class="container" id="problem-3">
+    <div class="row">
+      <h2 class="col">Problem 3</h2>
+    </div>
+    <div class="row">
+      <div class="col problem instructions">
+        <p>Edit <code>js/problem_3.js</code> so that when the user clicks the button below, its text content is <em>You
+          clicked the button {x} time(s)</em>. <code>clickCountButton</code> (defined for you) is a reference to the
+          button. As in problem 2, your code should handle plural rules properly (for example, display <em>You clicked
+            the button 1 time</em> if the user clicked once and <em>You clicked the button 2 time<strong>s</strong></em>
+          if the user clicked twice). You can re-use the <code>addS</code> function from problem 2 to achieve this.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="sample-output col not-showing-output">
+        <button type="button" class="btn btn-sm btn-outline-secondary">Show a GIF of the desired result</button>
+        <img src="images/problem_3.gif" />
+      </div>
+    </div>
+    <div class="execution row">
+      <div class="col">
+        <button class="btn btn-lg btn-primary" id="click-count" type="button">You clicked the button 0 times</button>
+      </div>
+    </div>
+  </section>
+  <section class="container" id="problem-4">
+    <div class="row">
+      <h2 class="col">Problem 4</h2>
+    </div>
+    <div class="row">
+      <div class="col problem instructions">
+        <p>Edit <code>js/problem_4.js</code> so that it gives a user feedback on the length of their message. Messages
+          can have a maximum length of <code>MAX_CHARACTERS</code> characters (set to <code>50</code>). As the user
+          types in the <code>&lt;input /&gt;</code> field below, your code should update its feedback to show how many
+          characters they have left. We defined the classes to display the proper feedback (as describe below).</p>
+        <p>In order to do this, your code should:</p>
+        <ul>
+          <li>When the user is <strong>under</strong> the character limit (<code>messageInput.value.length <=
+            MAX_CHARACTERS</code>), your code should:
+            <ul>
+              <li>Add the <code>is-valid</code> class to <code>messageInput</code> (and make sure it does
+                <strong>not</strong> have the <code>is-invalid</code> class)
+              </li>
+              <li>Add the <code>valid-feedback</code> class to <code>messageFeedback</code> (and make sure it does
+                <strong>not</strong> have the <code>invalid-feedback</code> class)
+              </li>
+              <li>Display the feedback <em>{n} characters left</em></li>
+            </ul>
+          </li>
+          <li>When the user is <strong>over</strong> the character limit (<code>messageInput.value.length >
+            MAX_CHARACTERS</code>), your code should:
+            <ul>
+              <li>Add the <code>is-invalid</code> class to <code>messageInput</code> (and make sure it does
+                <strong>not</strong> have the <code>is-valid</code> class)
+              </li>
+              <li>Add the <code>invalid-feedback</code> class to <code>messageFeedback</code> (and make sure it does
+                <strong>not</strong> have the <code>valid-feedback</code> class)
+              </li>
+              <li>Display the feedback <em>{n} characters too long</em></li>
+            </ul>
+          </li>
+        </ul>
+
+        Notes:
+        <ul>
+          <li>Use <a
+            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length"
+            target="_blank">the <code>.length</code> property</a> to get the length of a string in JavaScript
+          </li>
+          <li>Use <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/input_event">the
+            <code>'input'</code> event</a> to listen for changes to the <code>&lt;input /&gt;</code> element.
+          </li>
+          <li>We define <code>messageInput</code>, a reference to the <code>&lt;input /&gt;</code> element and <code>messageFeedback</code>
+            a reference to the element for providing feedback.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="sample-output col not-showing-output">
+        <button type="button" class="btn btn-sm btn-outline-secondary">Show a GIF of the desired result</button>
+        <img src="images/problem_4.gif" />
+      </div>
+    </div>
+    <div class="execution row">
+      <div class="col-md-4">
+        <label for="message-input" class="form-label">Enter your message below:</label>
+        <textarea placeholder="Type here" class="form-control is-valid" id="message-input" rows="3">Type your message here and look at the feedback.</textarea>
+        <div class="valid-feedback" id="message-feedback">Looks good!</div>
+      </div>
+    </div>
+  </section>
+  <section class="container" id="problem-5">
+    <div class="row">
+      <h2 class="col">Problem 5</h2>
+    </div>
+    <div class="row">
+      <div class="col problem instructions">
+        <p>Edit the file <code>js/problem_5.js</code> for this problem. We will define a UI for finding words that rhyme
+          with a given word (using the DataMuse API). When the user types something into the <code>&lt;input
+            /&gt;</code> element (<code>wordInput</code>) and clicks the button (<code>showRhymesButton</code>) then the
+          output (<code>rhymesOutput</code>) should show a list of words that rhyme with the given word by adding a
+          <code>&lt;li class="list-group-item" /&gt;</code> to <code>rhymesOutput</code> for each word:</p>
+        <pre>&lt;li class="list-group-item"&gt;{WORD}&lt;/li&gt;</pre>
+
+        <p>We provide the function <code>getRhymes</code>, which accepts two arguments:</p>
+        <ol>
+          <li>A string that represents a word</li>
+          <li>A callback function, which will be called with one argument (a list of words)</li>
+        </ol>
+
+        For example:
+        <pre>
+getRhymes('giraffe', (result) => {
+    console.log(result);
+});
+                        </pre>
+
+        Logs to the console: <code>Array(95) [ { word: "staff", score: 2672, numSyllables: 1 }, { word: "half", score:
+        1718, numSyllables: 1 }, ...]</code>
+
+        <p>If there are no rhymes, your code should display <em>(no rhymes)</em>. Also, be sure that when the user
+          clicks the "Show Rhymes" button, the old output is cleared. When the user clicks the "clear" button (<code>clearButton</code>),
+          both <code>rhymesOutput</code> and <code>wordInput</code> should clear.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="sample-output col not-showing-output">
+        <button type="button" class="btn btn-sm btn-outline-secondary">Show a GIF of the desired result</button>
+        <img src="images/problem_5.gif" />
+      </div>
+    </div>
+    <div class="execution row">
+      <form class="col-md-6">
+        <label for="rhyme-with-input">Find words that rhyme with:</label>
+        <div class="input-group mb-3">
+          <input class="form-control" type="text" id="rhyme-with-input" placeholder="Enter a word" />
+          <button class="btn btn-outline-primary" id="show-rhymes-button" type="button">Show Rhymes</button>
+          <button class="btn btn-outline-secondary" id="clear-rhymes-button" type="button">Clear</button>
+        </div>
+      </form>
+      <div class="col-md-6">
+        <ul class="list-group" id="rhymes"></ul>
+      </div>
+    </div>
+  </section>
+</main>
+<script>
+  (function() {
+    const dueDateInput = document.querySelector('#time-left #exam-due-date');
+    const dueTimeInput = document.querySelector('#time-left #exam-due-time');
+    const timeLeftDisplay = document.querySelector('#time-left #exam-time-left');
+
+    function updateTimeLeft() {
+      const timezoneOffset = (new Date()).getTimezoneOffset() * 60 * 1000;
+      const dueTimeTimestamp = dueDateInput.valueAsNumber + dueTimeInput.valueAsNumber + timezoneOffset;
+
+      const totalSecondsRemaining = Math.floor((dueTimeTimestamp - Date.now()) / 1000);
+      const minutesLeft = Math.floor(totalSecondsRemaining / 60);
+      const secondsLeft = totalSecondsRemaining - 60 * minutesLeft;
+
+      timeLeftDisplay.textContent = `${minutesLeft} minute${s(minutesLeft)} and ${secondsLeft} second${s(
+        secondsLeft)} remaining`;
+    }
+
+    dueDateInput.addEventListener('change', updateTimeLeft);
+    dueTimeInput.addEventListener('change', updateTimeLeft);
+    setInterval(updateTimeLeft, 50);
+
+    function s(n) {
+      return n === 1 ? '' : 's';
+    }
+  })();
+</script>
+<script>
+  (function() {
+    const sampleOutputs = document.querySelectorAll('.sample-output');
+    sampleOutputs.forEach((sampleOutputEl) => {
+      const showHideButton = sampleOutputEl.querySelector('button');
+      showHideButton.addEventListener('click', () => {
+        sampleOutputEl.classList.toggle('not-showing-output');
+
+        if (sampleOutputEl.classList.contains('not-showing-output')) {
+          showHideButton.textContent = 'Show a GIF of the desired result';
+        } else {
+          showHideButton.textContent = 'Hide desired result GIF';
+        }
+      });
+    });
+  })();
+</script>
+</body>
+</html>

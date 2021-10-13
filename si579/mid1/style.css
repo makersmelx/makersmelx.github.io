@@ -1,0 +1,42 @@
+:root {
+    --bs-body-font-family: Georgia, 'Times New Roman', Times, serif;
+}
+main {
+    margin-top: 4em;
+}
+
+.square-block {
+    width: 150px;
+    height: 150px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    text-align: center;
+    padding-top: 50px;
+    margin-top: 10px;
+}
+
+.clear { background-color: transparent; }
+.red { background-color: var(--bs-red); }
+.green { background-color: var(--bs-green); }
+.blue { background-color: var(--bs-blue); }
+.yellow { background-color: var(--bs-yellow); }
+
+.execution {
+    margin-top: 20px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border: 1px solid #CCC;
+    background-color: #FAFAFAFA;
+    border-radius: 3px;
+}
+
+.sample-output.not-showing-output > img {
+    display: none;
+}
+.sample-output img {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    max-width: 1000px;
+    display: block;
+}
