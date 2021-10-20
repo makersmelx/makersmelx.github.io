@@ -91,7 +91,7 @@ module.exports = {
       description: [
         'Active Maintainer & Front End Developer.',
         'The official online judge for UM-SJTU Joint Institute at Shanghai Jiao Tong University.'],
-      img: 'portfolio/JOJ.png'
+      img: 'JOJ.png'
     },
     {
       name: 'FOCS Git Server',
@@ -100,7 +100,7 @@ module.exports = {
       description: [
         'Maintainer & Developer.',
         'The self-hosted Git Service for UM-SJTU Joint Institute at Shanghai Jiao Tong University.'],
-      img: 'portfolio/GITEA.png'
+      img: 'GITEA.png'
     }, {
       name: 'Zelda (Unity Remaster)',
       url: 'https://jiayao.me/eecs494/p1',
@@ -109,7 +109,7 @@ module.exports = {
         'Coursework of EECS 494: Introduction to Game Development.',
         'Re-implement The Legend of Zelda (1986 NES) with Unity and custom a new level in the game. '
       ],
-      img: 'portfolio/eecs494p1.png'
+      img: 'eecs494p1.png'
     },
     {
       name: 'Miku Skiing',
@@ -120,7 +120,7 @@ module.exports = {
         'Solo Developer',
         'Join Hatsune Miku in freestyle skiing in the snow world.'
       ],
-      img: 'portfolio/eecs494p2.jpg'
+      img: 'eecs494p2.jpg'
     }
   ],
   contactFormUrl: process.env.CONTACT_FORM_ENDPOINT ||
