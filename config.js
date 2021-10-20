@@ -120,7 +120,7 @@ module.exports = {
         'Solo Developer',
         'Join Hatsune Miku in freestyle skiing in the snow world.'
       ],
-      img: 'portfolio/eecs494p2.png'
+      img: 'portfolio/eecs494p2.jpg'
     }
   ],
   contactFormUrl: process.env.CONTACT_FORM_ENDPOINT ||
