@@ -24,7 +24,7 @@ module.exports = {
     'I earned my Bachelor\'s Degree in Electrical and Computer Engineering at Shanghai Jiao Tong University.',
     'I was a software engineer intern at Apple.',
     'My areas of interest are software engineering and interaction design.',
-    'I am always seeking to work on amazing things that connect people with joy and inspiration.',
+    'I am always seeking to work on amazing things that connect people with joy and inspiration.'
   ],
   resume: 'Jiayao\ Wu\ Resume.pdf',
   // side bar contacts
@@ -110,7 +110,19 @@ module.exports = {
         'Re-implement The Legend of Zelda (1986 NES) with Unity and custom a new level in the game. '
       ],
       img: 'portfolio/eecs494p1.png'
-    }],
+    },
+    {
+      name: 'Miku Skiing',
+      url: 'https://jiayao.me/eecs494/p2',
+      color: 'black',
+      description: [
+        'Project 2: Rapid Game Prototype, EECS 494: Introduction to Game Development.',
+        'Solo Developer',
+        'Join Hatsune Miku in freestyle skiing in the snow world.'
+      ],
+      img: 'portfolio/eecs494p2.png'
+    }
+  ],
   contactFormUrl: process.env.CONTACT_FORM_ENDPOINT ||
     'https://getform.io/f/09a3066f-c638-40db-ad59-05e4ed71e451',
   googleAnalyticTrackingId: process.env.GA_TRACKING_ID || '',
