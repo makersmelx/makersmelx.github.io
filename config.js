@@ -121,6 +121,17 @@ module.exports = {
         'Join Hatsune Miku in freestyle skiing in the snow world.'
       ],
       img: 'portfolio/eecs494p2.jpg'
+    },
+    {
+      name: 'Chronos',
+      url: 'https://jiayao.me/eecs494/p3',
+      color: 'black',
+      description: [
+        'Project 3: Game Showcase Game, EECS 494: Introduction to Game Development.',
+        'Developer in Teams',
+        'A first-person parkour game in a cyberpunk-style city'
+      ],
+      img: 'portfolio/eecs494p3.png'
     }
   ],
   contactFormUrl: process.env.CONTACT_FORM_ENDPOINT ||
