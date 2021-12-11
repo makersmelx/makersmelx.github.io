@@ -124,12 +124,12 @@ module.exports = {
     },
     {
       name: 'Chronos',
-      url: 'https://jiayao.me/eecs494/p3',
+      url: 'https://makersmelx.itch.io/chronos',
       color: 'black',
       description: [
-        'Project 3: Game Showcase Game, EECS 494: Introduction to Game Development.',
-        'Developer in Teams',
-        'A first-person parkour game in a cyberpunk-style city'
+        'Final Project Game, EECS 494: Introduction to Game Development.',
+        'Lead Programmer, Level Designer, Project Manager',
+        'Chronos is a fast-paced parkour platformer.  Race through the rooftops of a futuristic city to reach the goal. You only have limited time, so move with speed and agility.'
       ],
       img: 'portfolio/eecs494p3.png'
     }
