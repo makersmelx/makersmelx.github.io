@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from 'react';
-import { Chip, Divider, Grid, Typography } from '@mui/material';
+import { Chip, Divider, Fade, Grid, Typography } from '@mui/material';
 import { Computer, Widgets } from '@mui/icons-material';
+
 import portfolio from '../.././../stuff/portfolio';
 import PortfolioCard from '../../components/PortfolioCard';
 
@@ -64,15 +65,19 @@ const Index = () => {
     () => tagsFromSets(categoryTagSet, category, setCategory),
     [category]);
 
-  const Cards = useMemo(() => {
-    return portfolio.filter(item => filterFunc(item, 'tech', tech))
-    .filter(item => filterFunc(item, 'category', category))
-    .map((item) => (
-      <Grid item xs={12} lg={6} key={item.name}>
-        <PortfolioCard item={item} />
-      </Grid>
-    ));
-  }, [tech, category]);
+  const Cards = portfolio.filter(item => filterFunc(item, 'tech', tech))
+  .filter(item => filterFunc(item, 'category', category))
+  .map((item) => {
+    const fadeIn = filterFunc(item, 'tech', tech) && filterFunc(item,
+      'category', category);
+    return (
+      <Fade in={fadeIn} appear>
+        <Grid item xs={12} lg={6} key={item.name}>
+          <PortfolioCard item={item} />
+        </Grid>
+      </Fade>
+    );
+  });
 
   return (
     <>
@@ -100,7 +105,6 @@ const Index = () => {
         {Cards}
       </Grid>
     </>
-
   );
 };
 
