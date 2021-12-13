@@ -38,8 +38,8 @@ export default [
     description: 'The self-hosted Git Service for UM-SJTU Joint Institute at Shanghai Jiao Tong University.',
     image: '/portfolio/GITEA.png',
     tags: {
-      category: ['Maintain'],
-      tech: ['Go'],
+      category: ['DevOps'],
+      tech: ['Go','Linux'],
     },
     page: '/portfolio/gitea'
   },

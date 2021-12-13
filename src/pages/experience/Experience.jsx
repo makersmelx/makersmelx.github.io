@@ -29,7 +29,7 @@ const generateWorkTimeline = (data) => (
     contentStyle={{
       'padding': '0em 0em',
       'boxShadow': 'none',
-      'line-height': '1.8',
+      'lineHeight': '1.8',
       'margin': '0 0'
     }}
     key={data.company}

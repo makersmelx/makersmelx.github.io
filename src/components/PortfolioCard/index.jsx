@@ -42,6 +42,7 @@ export default function Index({ item }) {
     <>
       {
         tags && tags.category && tags.category.map((tag) => <Chip
+          key={tag}
           label={tag}
           color="primary"
           size="small"
@@ -50,6 +51,7 @@ export default function Index({ item }) {
       }
       {
         tags && tags.tech && tags.tech.map((tag) => <Chip
+          key={tag}
           label={tag}
           size="small"
           sx={{ marginTop: 1, marginRight: 1 }}
@@ -64,6 +66,9 @@ export default function Index({ item }) {
         height="200"
         image={image}
         alt={name}
+        sx={{
+          boxShadow: '0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%)'
+        }}
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
@@ -72,7 +77,7 @@ export default function Index({ item }) {
         <Typography
           variant="body2"
           color="text.secondary"
-          height={60}
+          height={{ xs: 100, sm: 60, lg: 80, xl: 60 }}
           textOverflow="ellipsis"
         >
           {description}
