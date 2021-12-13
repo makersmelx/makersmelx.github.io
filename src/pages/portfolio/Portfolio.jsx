@@ -89,7 +89,7 @@ const Index = () => {
     return (
       <>
         {Tags}
-        {Cards.length < portfolio.length && <Grid item xs="auto">
+        <Grid item xs="auto">
           <Collapse
             orientation="horizontal"
             in={Cards.length < portfolio.length}
@@ -107,7 +107,6 @@ const Index = () => {
             />
           </Collapse>
         </Grid>
-        }
       </>
     );
   };
