@@ -14,7 +14,12 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "@emotion/react": "^11.7.0",
+    "@emotion/styled": "^11.6.0",
+    "@fontsource/roboto": "^4.5.1",
     "@fortawesome/react-fontawesome": "^0.1.14",
+    "@mui/icons-material": "^5.2.1",
+    "@mui/material": "^5.2.3",
     "antd": "^4.0.1",
     "feather-icons-react": "^0.4.1",
     "font-awesome": "^4.7.0",

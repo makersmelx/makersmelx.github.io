@@ -1,31 +1,28 @@
-import React from 'react';
-import { Col, Row } from 'antd';
-import Config from '../../../config';
-import TagCard from '../../components/TagCard';
+import React, { useMemo } from 'react';
+import { Grid } from '@mui/material';
+import portfolio from '../.././../stuff/portfolio';
+import PortfolioCard from '../../components/PortfolioCard';
 
 const Index = () => {
+  const Cards = useMemo(() => {
+    return portfolio.map((item) => (
+      <Grid item xs={12} lg={6}>
+        <PortfolioCard item={item} />
+      </Grid>
+    ));
+  }, []);
   return (
     <>
-      <Row
-        justify="left"
-        gutter={[8, 24]}
+      <Grid
+        container
+        rowSpacing={3}
+        spacing={3}
+        justifyContent="space-between"
       >
-        {Config.portfolio.map(proj => (
-          <Col
-            sm={24}
-            lg={11}
-          >
-            <TagCard
-              url={proj.url}
-              img={proj.img}
-              color={proj.color}
-              description={proj.description}
-              name={proj.name}
-            />
-          </Col>
-        ))}
-      </Row>
+        {Cards}
+      </Grid>
     </>
+
   );
 };
 

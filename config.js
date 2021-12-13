@@ -83,57 +83,6 @@ module.exports = {
       ]
     }
   ],
-  portfolio: [
-    {
-      name: 'Joint Online Judge',
-      url: 'https://joj.sjtu.edu.cn',
-      color: 'black',
-      description: [
-        'Active Maintainer & Front End Developer.',
-        'The official online judge for UM-SJTU Joint Institute at Shanghai Jiao Tong University.'],
-      img: 'portfolio/JOJ.png'
-    },
-    {
-      name: 'FOCS Git Server',
-      url: 'https://focs.ji.sjtu.edu.cn/git',
-      color: 'black',
-      description: [
-        'Maintainer & Developer.',
-        'The self-hosted Git Service for UM-SJTU Joint Institute at Shanghai Jiao Tong University.'],
-      img: 'portfolio/GITEA.png'
-    }, {
-      name: 'Zelda (Unity Remaster)',
-      url: 'https://jiayao.me/eecs494/p1',
-      color: 'black',
-      description: [
-        'Coursework of EECS 494: Introduction to Game Development.',
-        'Re-implement The Legend of Zelda (1986 NES) with Unity and custom a new level in the game. '
-      ],
-      img: 'portfolio/eecs494p1.png'
-    },
-    {
-      name: 'Miku Skiing',
-      url: 'https://jiayao.me/eecs494/p2',
-      color: 'black',
-      description: [
-        'Project 2: Rapid Game Prototype, EECS 494: Introduction to Game Development.',
-        'Solo Developer',
-        'Join Hatsune Miku in freestyle skiing in the snow world.'
-      ],
-      img: 'portfolio/eecs494p2.jpg'
-    },
-    {
-      name: 'Chronos',
-      url: 'https://makersmelx.itch.io/chronos',
-      color: 'black',
-      description: [
-        'Final Project Game, EECS 494: Introduction to Game Development.',
-        'Lead Programmer, Level Designer, Project Manager',
-        'Chronos is a fast-paced parkour platformer.  Race through the rooftops of a futuristic city to reach the goal. You only have limited time, so move with speed and agility.'
-      ],
-      img: 'portfolio/eecs494p3.png'
-    }
-  ],
   contactFormUrl: process.env.CONTACT_FORM_ENDPOINT ||
     'https://getform.io/f/09a3066f-c638-40db-ad59-05e4ed71e451',
   googleAnalyticTrackingId: process.env.GA_TRACKING_ID || '',
