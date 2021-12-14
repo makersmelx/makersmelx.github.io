@@ -59,7 +59,7 @@ const DomContent = () => {
         </ul>
         <div className={style.resumeDownload}>
           <a
-            href={Config.resume}
+            href="https://jiayao.me/Jiayao%20Wu%20Resume.pdf"
             target="_blank"
           >
             Download Resume
