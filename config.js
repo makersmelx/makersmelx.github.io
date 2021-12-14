@@ -11,8 +11,8 @@ module.exports = {
   // route
   pages: {
     about: '/',
-    experience: '/experience',
-    portfolio: '/portfolio'
+    experience: '/experience/',
+    portfolio: '/portfolio/'
     // 'Fun Facts': '/funFacts',
     // blog: '/blog',
     // tags: '/tags'
