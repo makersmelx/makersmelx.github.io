@@ -53,38 +53,43 @@ const Index = () => {
   });
 
   const tagsFromSets = (inputSet, stateValue, setFunc) => {
-    const Tags = Array.from(inputSet).sort().map((tag) => (
-      <Grid item>
-        <Chip
-          icon={
-            <Collapse
-              style={{ height: '100%' }}
-              orientation="horizontal"
-              in={stateValue && stateValue[tag]}
-            >
-              <Check style={{ marginTop: '20%' }} />
-            </Collapse>
-          }
-          label={<Typography sx={{ fontWeight: 500 }}>
-            {tag}
-          </Typography>}
-          key={tag}
-          onClick={() => {
-            setFunc(prev => {
-              return {
-                ...prev,
-                [tag]: !prev[tag]
-              };
-            });
-          }}
-          variant={stateValue && stateValue[tag] ? 'filled' : 'outlined'}
-        />
-      </Grid>
-    ));
+    const Tags = Array.from(inputSet).sort().map((tag) => {
+      const CollapseIcon = (
+        <Collapse
+          style={{ height: '100%' }}
+          orientation="horizontal"
+          in={stateValue && stateValue[tag]}
+        >
+          <Check style={{ marginTop: '20%' }} />
+        </Collapse>
+      );
+      const Label = (
+        <Typography sx={{ fontWeight: 500 }}>
+          {tag}
+        </Typography>
+      );
+      const onClick = () => {
+        setFunc(prev => {
+          return {
+            ...prev,
+            [tag]: !prev[tag]
+          };
+        });
+      };
+      return (
+        <Grid item>
+          <Chip
+            icon={CollapseIcon}
+            label={Label}
+            key={tag}
+            onClick={onClick}
+            variant={stateValue && stateValue[tag] ? 'filled' : 'outlined'}
+          />
+        </Grid>
+      );
+    });
     const clearAll = () => {
-      setFunc(prev => {
-        return {};
-      });
+      setFunc({});
     };
     return (
       <>
@@ -111,27 +116,30 @@ const Index = () => {
     );
   };
 
-  const techTags = useMemo(() => tagsFromSets(techTagSet, tech, setTech),
-    [tech]);
-  const categoryTags = useMemo(
-    () => tagsFromSets(categoryTagSet, category, setCategory),
-    [category]);
-
-  return (
-    <>
-      <Grid container spacing={1} mt={2} alignItems="center" rowSpacing={1}>
-        <Grid item sx={{ marginRight: 1 }}>
-          <Widgets />
-        </Grid>
-        {categoryTags}
-      </Grid>
-      <Divider sx={{ mt: 2 }} />
+  const techTags = useMemo(
+    () => (
       <Grid container spacing={1} mt={2} alignItems="center" rowSpacing={1}>
         <Grid item sx={{ marginRight: 1 }}>
           <Computer />
         </Grid>
-        {techTags}
+        {tagsFromSets(techTagSet, tech, setTech)}
       </Grid>
+    ), [tech]);
+
+  const categoryTags = useMemo(
+    () => (
+      <Grid container spacing={1} mt={2} alignItems="center" rowSpacing={1}>
+        <Grid item sx={{ marginRight: 1 }}>
+          <Widgets />
+        </Grid>
+        {tagsFromSets(categoryTagSet, category, setCategory)}
+      </Grid>), [category]);
+
+  return (
+    <>
+      {categoryTags}
+      <Divider sx={{ mt: 2 }} />
+      {techTags}
       <Divider sx={{ mt: 2 }} />
       <Grid
         container
