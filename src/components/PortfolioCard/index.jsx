@@ -78,7 +78,7 @@ export default function Index({ item }) {
           variant="body2"
           color="text.secondary"
           height={80}
-          textOverflow="ellipsis"
+          paragraph
         >
           {description}
         </Typography>

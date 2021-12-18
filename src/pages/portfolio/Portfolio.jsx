@@ -119,7 +119,7 @@ const Index = () => {
   const techTags = useMemo(
     () => (
       <Grid container spacing={1} mt={2} alignItems="center" rowSpacing={1}>
-        <Grid item sx={{ marginRight: 1 }}>
+        <Grid item>
           <Computer />
         </Grid>
         {tagsFromSets(techTagSet, tech, setTech)}
