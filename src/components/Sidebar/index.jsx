@@ -1,18 +1,25 @@
 import React from 'react';
-import { Affix, Col, Layout, Row } from 'antd';
+import { Col, Layout, Row } from 'antd';
 import {
   Email,
   GitHub,
   LinkedIn,
   MapsHomeWork,
   Telegram,
-  Twitter
+  Twitter,
 } from '@mui/icons-material';
-import { globalHistory } from '@reach/router';
 import style from './sidebar.module.less';
-import { useWindowSize } from '../../utils/hooks';
 import Config from '../../../config';
-import { Chip, IconButton, Typography } from '@mui/material';
+import {
+  Avatar,
+  Button,
+  Chip,
+  Grid,
+  IconButton,
+  Link,
+  Stack,
+  Typography,
+} from '@mui/material';
 
 const { Content } = Layout;
 const iconMap = {
@@ -24,89 +31,70 @@ const iconMap = {
 const DomContent = () => {
   return (
     <aside>
-      <div className={style.profileAvatar} />
-      <div className={`${style.name} centerAlign`}>
+      <Stack direction="column" alignItems="center" spacing={3}>
+        <Avatar
+          alt="Jiayao Wu"
+          src="https://www.gravatar.com/avatar/c8fd8dc38f5759e9bdbe271e203bb6cb?s=2048"
+          sx={{ width: 200, height: 200 }}
+        />
         <Typography variant="h4" component="div" gutterBottom>
           Jiayao Wu
         </Typography>
         <Chip label={'Graduate Student'} />
-
-        <div className="centerAlign box">
-          {
-            (Object.entries(Config.social)).map(link => {
-              return (
-                <IconButton href={link[1]} key={link[0]}>
-                  {iconMap[link[0]]}
-                </IconButton>
-              );
-            })
-          }
-        </div>
-        <ul className={`centerAlign box ${style.contactBlock}`}>
-          <li className={`${style.contactBlockItem}`} id={'location'}>
+        <Stack direction="row">
+          {(Object.entries(Config.social)).map(link => {
+            return (
+              <IconButton href={link[1]} key={link[0]}>
+                {iconMap[link[0]]}
+              </IconButton>
+            );
+          })}
+        </Stack>
+        <Stack direction="column" spacing={1}>
+          <Stack direction="row" spacing={1}>
             <MapsHomeWork />
-            Ann Arbor, MI
-          </li>
-          <li className={`${style.contactBlockItem}`} id={'mail'}>
+            <Typography component="div">
+              Ann Arbor, MI
+            </Typography>
+          </Stack>
+          <Stack direction="row" spacing={1}>
             <Email />
-            <a
+            <Link
               href="mailto:&#109;&#097;&#107;&#101;&#114;&#115;&#109;&#101;&#108;&#120;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;"
               target="_top"
+              className={style.emailHider}
+              sx={{
+                color: 'inherit'
+              }}
             >
-              <span className={style.emailHider}>@</span>
-            </a>
-          </li>
-        </ul>
-        <div className={style.resumeDownload}>
-          <a
-            href="https://jiayao.me/Jiayao%20Wu%20Resume.pdf"
-            target="_blank"
-          >
-            Download Resume
-          </a>
-        </div>
-      </div>
+              @
+            </Link>
+          </Stack>
+        </Stack>
+        <Button variant="contained">
+          Resume
+        </Button>
+      </Stack>
     </aside>
   );
 };
 
 const Sidebar = (props) => {
-  const [width] = useWindowSize();
   const { children } = props;
-  const { pathname } = globalHistory.location;
-  let domContent = <DomContent />;
-  if (width > 997) {
-    domContent = (
-      <Affix offsetTop={0}>
-        <DomContent />
-      </Affix>
-    );
-  }
-  if (width < 768) {
-    domContent = <></>;
-    if (pathname === '/') {
-      domContent = <DomContent />;
-    }
-  }
   return (
-    <>
-      <Layout>
-        <Content className={`${style.content} ${style.background}`}>
-          <Row>
-            <Col sm={24} md={9} lg={6} className={style.sidebarContent}>
-              {domContent}
-            </Col>
-            <Col sm={24} md={15} lg={18}>
-              <Layout
-                className={`${style.background} ${style.boxContent} borderRadiusSection`}
-              >
-                {children}
-              </Layout>
-            </Col>
-          </Row>
-        </Content>
-      </Layout>
-    </>
+    <Grid
+      container
+      justifyContent="space-around"
+      alignItems="flex-start"
+      spacing={1}
+    >
+      <Grid sm={12} md={12} lg={3} xxl={2} item>
+        <DomContent />
+      </Grid>
+      <Grid sm={12} md={12} lg={9} xxl={10} item>
+        {children}
+      </Grid>
+    </Grid>
   );
 };
 

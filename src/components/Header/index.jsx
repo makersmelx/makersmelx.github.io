@@ -1,63 +1,53 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'gatsby';
-import { Layout } from 'antd';
-import style from './header.module.less';
-import '../../styles/global.less';
-import { useWindowSize } from '../../utils/hooks';
 import Config from '../../../config';
+import { Tab, Tabs, Typography } from '@mui/material';
 
-export default () => {
-  const [menu, setMenu] = useState(false);
-
-  const [width] = useWindowSize();
-  const toggleMenu = () => {
-    if (width !== 0 && width <= 768) {
-      if (menu) {
-        setMenu(false);
-      } else {
-        setMenu(true);
-      }
+export default ({ location }) => {
+  let initValue = '/';
+  Object.values(Config.pages).forEach(item => {
+    if (location && location.pathname && location.pathname.indexOf(item) >= 0) {
+      initValue = item;
     }
-  };
+  });
+  useEffect(() => {
+    setValue(initValue);
+  }, [location]);
+  const [value, setValue] = useState(
+    location && location.state && location.state.from
+      ? location.state.from
+      : initValue);
   return (
-    <>
-      <div
-        className={style.circleMenu} role="button" tabIndex="0"
-        onKeyDown={toggleMenu} onClick={toggleMenu}
-      >
-        <div className={`${style.hamburger} ${menu ? style.menuIcon : null}`}>
-          <div className={style.line} />
-          <div className={style.line} />
-          <div className={style.hamburgerText}>MENU</div>
-        </div>
-      </div>
-      <Layout
-        className={`${style.navWrap} ${menu ? null : style.hidden} ${menu ?
-          style.openMenu :
-          null}`}
-      >
-        <div className={style.backgroundDiv}>
-          <ul className={style.nav}>
-            {
-              (Object.entries(Config.pages)).map((page) => {
-                return (
-                  <li className={style.navItem} key={page[0]}>
-                    <Link
-                      to={page[1]} onClick={toggleMenu} activeStyle={{
-                      borderRadius: '4px',
-                      color: '#fff',
-                      backgroundColor: '#1976d2'
-                    }}
-                    >
-                      {page[0]}
-                    </Link>
-                  </li>
-                );
-              })
-            }
-          </ul>
-        </div>
-      </Layout>
-    </>
+    <Tabs value={value} sx={{ marginLeft: 'auto' }}>
+      {
+        (Object.entries(Config.pages)).map((page, index) => {
+          return (
+            <Tab
+              value={page[1]}
+              key={page[0]}
+              label={
+                <Link
+                  color="rgba(0,0,0,0.6)"
+                  to={page[1]}
+                  state={{
+                    from: location && location.pathname
+                      ? location.pathname
+                      : '/'
+                  }}
+                  isPartiallyCurrent
+                >
+                  <Typography
+                    color={value === page[1]
+                      ? 'primary.main'
+                      : 'text.secondary'}
+                  >
+                    {page[0]}
+                  </Typography>
+                </Link>}
+            />
+          );
+        })
+      }
+    </Tabs>
   );
 };

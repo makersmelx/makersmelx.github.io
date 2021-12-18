@@ -5,6 +5,7 @@
 /* eslint-disable react/prefer-stateless-function */
 import React from 'react';
 import PropTypes from 'prop-types';
+import config from '../config';
 
 export default class HTML extends React.Component {
   render() {
@@ -17,6 +18,7 @@ export default class HTML extends React.Component {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
+        <title>{config.siteTitle}</title>
         {this.props.headComponents}
       </head>
       <body {...this.props.bodyAttributes} className="light">

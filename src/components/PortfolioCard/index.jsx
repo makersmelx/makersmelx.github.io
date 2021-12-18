@@ -77,7 +77,7 @@ export default function Index({ item }) {
         <Typography
           variant="body2"
           color="text.secondary"
-          height={{ xs: 100, sm: 60, lg: 80, xl: 60 }}
+          height={80}
           textOverflow="ellipsis"
         >
           {description}
@@ -86,9 +86,13 @@ export default function Index({ item }) {
       </CardContent>
       <CardActions disableSpacing>
         {Icons}
-        <Button size="small" style={{ marginLeft: 'auto' }} href={page}>
+        {page && <Button
+          size="small"
+          style={{ marginLeft: 'auto' }}
+          href={page}
+        >
           Learn More
-        </Button>
+        </Button>}
       </CardActions>
     </Card>
   );

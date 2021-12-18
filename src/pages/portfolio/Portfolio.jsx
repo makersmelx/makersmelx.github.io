@@ -28,7 +28,7 @@ const Index = () => {
       'category', category);
     return (
       <Fade in={fadeIn} appear>
-        <Grid item xs={12} lg={6} key={item.name}>
+        <Grid item xs={12} md={6} xl={4} key={item.name}>
           <PortfolioCard item={item} />
         </Grid>
       </Fade>
@@ -77,7 +77,7 @@ const Index = () => {
         });
       };
       return (
-        <Grid item>
+        <Grid item key={tag}>
           <Chip
             icon={CollapseIcon}
             label={Label}
@@ -145,7 +145,7 @@ const Index = () => {
         container
         rowSpacing={3}
         spacing={3}
-        justifyContent="space-between"
+        justifyContent="flex-start"
         mt={1}
       >
         {Cards}

@@ -27,7 +27,7 @@ export default [
       category: ['Front End'],
       tech: ['React.js', 'TypeScript'],
     },
-    page: 'portfolio/joj'
+    page: '/portfolio/joj'
   },
   {
     name: 'FOCS Git Server',
@@ -39,7 +39,7 @@ export default [
     image: '/portfolio/GITEA.png',
     tags: {
       category: ['DevOps'],
-      tech: ['Go','Linux'],
+      tech: ['Go', 'Linux'],
     },
     page: '/portfolio/gitea'
   },

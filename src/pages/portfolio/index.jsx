@@ -1,39 +1,20 @@
 import React from 'react';
-import { Layout } from 'antd';
-import { createTheme, ThemeProvider } from '@mui/material';
 
-import Header from '../../components/Header';
-import SidebarWrapper from '../../components/Sidebar';
+import GlobalLayout from '../../components/GlobalLayout';
 import Portfolio from './Portfolio';
+import SEO from '../../components/Seo';
 
-const Index = () => {
-  const theme = createTheme({
-    breakpoints: {
-      values: {
-        xs: 0,
-        sm: 576,
-        md: 768,
-        lg: 992,
-        xl: 1200,
-      },
-    },
-
-  });
+const Index = ({ location }) => {
   return (
-    <ThemeProvider theme={theme}>
-      <Layout className="outerPadding">
-        <Layout className="container">
-          <Header />
-          <SidebarWrapper>
-            <>
-              <h1 className="titleSeparate">Portfolio</h1>
-              <Portfolio />
-            </>
-          </SidebarWrapper>
-        </Layout>
-      </Layout>
-    </ThemeProvider>
-
+    <GlobalLayout location={location}>
+      <SEO
+        title="Portfolio"
+        description="Jiayao Wu's Portfolio"
+        path="/portfolio"
+      />
+      <h1 className="titleSeparate">Portfolio</h1>
+      <Portfolio />
+    </GlobalLayout>
   );
 };
 

@@ -1,5 +1,15 @@
 @import (reference) '../../styles/index.less';
 
+.emailHider {
+  &::before {
+    content: 'makersmelx';
+  }
+
+  &::after {
+    content: 'gmail.com'
+  }
+}
+
 .content {
   border-radius: @border-radius-content;
   margin: 0px;
@@ -99,17 +109,9 @@
   }
 
   a {
-    color: inherit;
+    color: black;
 
-    .emailHider {
-      &::before {
-        content: 'makersmelx';
-      }
 
-      &::after {
-        content: 'gmail.com'
-      }
-    }
   }
 }
 
@@ -128,5 +130,5 @@
 }
 
 .sideBar404Radius {
-  border-radius: 3rem 0 3rem 3rem;
+  border-radius: 6px 6px 6px 6px;
 }

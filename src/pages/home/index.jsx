@@ -1,23 +1,20 @@
 import React from 'react';
-import { Layout } from 'antd';
-import Header from '../../components/Header';
+import GlobalLayout from '../../components/GlobalLayout';
 
-import SidebarWrapper from '../../components/Sidebar';
 import AboutMe from './AboutMe';
+import SEO from '../../components/Seo';
 
-const Index = () => {
+const Index = ({ location }) => {
   return (
-    <Layout className="outerPadding">
-      <Layout className="container">
-        <Header />
-        <SidebarWrapper>
-          <>
-            <h1 className="titleSeparate">About Me</h1>
-            <AboutMe />
-          </>
-        </SidebarWrapper>
-      </Layout>
-    </Layout>
+    <GlobalLayout location={location}>
+      <SEO
+        title="About Me"
+        description="Self Introduction"
+        path="/"
+      />
+      <h1 className="titleSeparate">About Me</h1>
+      <AboutMe />
+    </GlobalLayout>
   );
 };
 
