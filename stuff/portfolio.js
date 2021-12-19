@@ -16,18 +16,43 @@ export default [
     page: 'portfolio/chronos'
   },
   {
+    name: 'Wish List',
+    url: {
+      github: 'https://github.com/SI669-Classroom-Fall-2021/si-669-final-project-makersmelx',
+    },
+    image: '/portfolio/wishlist.jpg',
+    tags: {
+      category: ['Mobile App'],
+      tech: ['React Native', 'TypeScript']
+    },
+    description: ' platform that helps users to prepare ideal gifts for their friends as well as receive dream gifts from friends.'
+  },
+  {
     name: 'Joint Online Judge',
     url: {
       website: 'https://joj.sjtu.edu.cn',
       github: 'https://github.com/joint-online-judge/cattle'
     },
     image: '/portfolio/JOJ.png',
-    description: 'The official online judge for UM-SJTU Joint Institute at Shanghai Jiao Tong University.',
+    description: 'The official online judge for UM-SJTU Joint Institute at Shanghai Jiao Tong University, used by 500+ students from 10 technical courses.',
     tags: {
       category: ['Front End'],
-      tech: ['React.js', 'TypeScript'],
+      tech: ['React', 'TypeScript'],
     },
     page: '/portfolio/joj'
+  },
+  {
+    name: 'CloudTides',
+    url: {
+      website: 'www.cloudtides.org.cn/home',
+      github: 'https://github.com/cloudtides/CloudTides',
+    },
+    image: '/portfolio/cloudTides.png',
+    tags: {
+      category: ['Front End'],
+      tech: ['Angular', 'TypeScript']
+    },
+    description: 'A connection between enterprises and scientific labs to better utilize idle computing resources for scientific researches.'
   },
   {
     name: 'FOCS Git Server',
@@ -35,7 +60,7 @@ export default [
       website: 'https://focs.ji.sjtu.edu.cn/git',
       github: 'https://github.com/BoYanZh/gitea',
     },
-    description: 'The self-hosted Git Service for UM-SJTU Joint Institute at Shanghai Jiao Tong University.',
+    description: 'The self-hosted Git Service for UM-SJTU Joint Institute at Shanghai Jiao Tong University. used by 200+ students from 4 technical courses.',
     image: '/portfolio/GITEA.png',
     tags: {
       category: ['DevOps'],
