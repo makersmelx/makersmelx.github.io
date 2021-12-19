@@ -71,7 +71,7 @@ const DomContent = () => {
             </Link>
           </Stack>
         </Stack>
-        <Button variant="contained">
+        <Button variant="contained" href="/JiayaoWu.pdf" target="_blank">
           Resume
         </Button>
       </Stack>

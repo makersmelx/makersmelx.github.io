@@ -25,6 +25,7 @@ export default ({ location }) => {
             <Tab
               value={page[1]}
               key={page[0]}
+              href={page[1]}
               label={
                 <Link
                   color="rgba(0,0,0,0.6)"
