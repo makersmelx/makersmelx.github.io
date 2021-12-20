@@ -18,6 +18,7 @@ export default [
   {
     name: 'Wish List',
     url: {
+      website:'https://expo.dev/@makersmelx/wish-list',
       github: 'https://github.com/SI669-Classroom-Fall-2021/si-669-final-project-makersmelx',
     },
     image: '/portfolio/wishlist.jpg',
@@ -25,7 +26,7 @@ export default [
       category: ['Mobile App'],
       tech: ['React Native', 'TypeScript']
     },
-    description: ' platform that helps users to prepare ideal gifts for their friends as well as receive dream gifts from friends.'
+    description: 'A platform that helps its users to prepare ideal gifts for their friends as well as receive dream gifts from friends. (need Expo App to see the demo)'
   },
   {
     name: 'Joint Online Judge',
