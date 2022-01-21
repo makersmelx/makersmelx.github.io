@@ -4,7 +4,6 @@ export default [
     url: {
       website: 'https://makersmelx.itch.io/chronos',
       game: 'https://makersmelx.itch.io/chronos',
-      github: 'https://github.com/UM-Electra-Studio/eecs494-p3',
       youtube: 'https://youtube.com/watch?v=_0HMWO7eWHI',
     },
     image: '/portfolio/eecs494p3.png',
