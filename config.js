@@ -30,7 +30,7 @@ module.exports = {
   // side bar contacts
   social: {
     github: 'https://github.com/makersmelx',
-    twitter: 'https://twitter.com/makersmelx',
+    // twitter: 'https://twitter.com/makersmelx',
     telegram: 'https://t.me/Makersmelx',
     linkedin: 'https://www.linkedin.com/in/jiayaowu/'
   },

@@ -33,14 +33,17 @@ const DomContent = () => {
     <aside>
       <Stack direction="column" alignItems="center" spacing={3}>
         <Avatar
-          alt="Jiayao Wu"
+          alt="Mike Wu"
           src="https://www.gravatar.com/avatar/c8fd8dc38f5759e9bdbe271e203bb6cb?s=2048"
-          sx={{ width: 200, height: 200 }}
+          sx={{ width: 120, height: 120 }}
         />
         <Typography variant="h4" component="div" gutterBottom>
           Jiayao Wu
         </Typography>
-        <Chip label={'Graduate Student'} />
+        <Stack direction="column" alignItems="center" spacing={1}>
+          {/*<Chip label="Software Developer" />*/}
+          <Chip label="Graduate Student" />
+        </Stack>
         <Stack direction="row">
           {(Object.entries(Config.social)).map(link => {
             return (
