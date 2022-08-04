@@ -4,7 +4,6 @@ export default [
     url: {
       website: 'https://makersmelx.itch.io/chronos',
       game: 'https://makersmelx.itch.io/chronos',
-      github: 'https://github.com/UM-Electra-Studio/eecs494-p3',
       youtube: 'https://youtube.com/watch?v=_0HMWO7eWHI',
     },
     image: '/portfolio/eecs494p3.png',
@@ -18,6 +17,7 @@ export default [
   {
     name: 'Wish List',
     url: {
+      website:'https://expo.dev/@makersmelx/wish-list',
       github: 'https://github.com/SI669-Classroom-Fall-2021/si-669-final-project-makersmelx',
     },
     image: '/portfolio/wishlist.jpg',
@@ -25,7 +25,7 @@ export default [
       category: ['Mobile App'],
       tech: ['React Native', 'TypeScript']
     },
-    description: ' platform that helps users to prepare ideal gifts for their friends as well as receive dream gifts from friends.'
+    description: 'A platform that helps its users to prepare ideal gifts for their friends as well as receive dream gifts from friends. (need Expo App to see the demo)'
   },
   {
     name: 'Joint Online Judge',
