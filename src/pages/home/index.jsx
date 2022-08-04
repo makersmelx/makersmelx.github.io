@@ -12,7 +12,6 @@ const Index = ({ location }) => {
         description="Self Introduction"
         path="/"
       />
-      <h1 className="titleSeparate">About Me</h1>
       <AboutMe />
     </GlobalLayout>
   );

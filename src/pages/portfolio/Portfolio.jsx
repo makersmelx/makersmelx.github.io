@@ -2,13 +2,14 @@ import React, { useMemo, useState } from 'react';
 import { Chip, Collapse, Divider, Fade, Grid, Typography } from '@mui/material';
 import { Check, Computer, Widgets } from '@mui/icons-material';
 
-import portfolio from '../.././../stuff/portfolio';
+import portfolio from '../.././../details/portfolio';
 import PortfolioCard from '../../components/PortfolioCard';
 
 const Index = () => {
   const [tech, setTech] = useState({});
   const [category, setCategory] = useState({});
 
+  // if true, it will display the item in the card
   const filterFunc = (item, name, stateValue) => {
     if (item && item.tags && item.tags[name] && item.tags[name]) {
       for (const key of Object.keys(stateValue)) {
@@ -22,18 +23,18 @@ const Index = () => {
   };
 
   const Cards = portfolio.filter(item => filterFunc(item, 'tech', tech))
-  .filter(item => filterFunc(item, 'category', category))
-  .map((item) => {
-    const fadeIn = filterFunc(item, 'tech', tech) && filterFunc(item,
-      'category', category);
-    return (
-      <Fade in={fadeIn} appear>
-        <Grid item xs={12} md={6} xl={4} key={item.name}>
-          <PortfolioCard item={item} />
-        </Grid>
-      </Fade>
-    );
-  });
+    .filter(item => filterFunc(item, 'category', category))
+    .map((item) => {
+      const fadeIn = filterFunc(item, 'tech', tech) && filterFunc(item,
+        'category', category);
+      return (
+        <Fade in={fadeIn} appear>
+          <Grid item xs={12} md={6} xl={4} key={item.name}>
+            <PortfolioCard item={item} />
+          </Grid>
+        </Fade>
+      );
+    });
 
   const techTagSet = new Set();
   const categoryTagSet = new Set();
