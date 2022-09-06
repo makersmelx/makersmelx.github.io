@@ -82,18 +82,6 @@ module.exports = {
         'Evaluated data and visualized in Python such as line charts of monthly usage.',
         'Improved the team’s productivity by saving an average of 4 hours per workflow.'
       ]
-    },
-    {
-      date: 'May 2020 - Aug 2021',
-      icon: 'university',
-      company: 'Shanghai Jiao Tong University',
-      team: 'UM-SJTU Joint Institute',
-      position: 'Teaching Assistant',
-      work: [
-        'Hosted review sessions and discussion sessions.',
-        'Prepared new assignments in modern C++, wrote detailed specification',
-        'Programmed Python scripts to automate grading scripts, used in 4 courses.'
-      ]
     }
   ],
   contactFormUrl: process.env.CONTACT_FORM_ENDPOINT ||
