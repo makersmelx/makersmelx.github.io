@@ -57,13 +57,26 @@ module.exports = {
   ],
   experience: [
     {
+      date: 'May 2022 - Present',
+      icon: 'apple',
+      company: 'Sony Interactive Entertainment',
+      team: 'Game Platform R&D',
+      position: 'Software Engineer Intern',
+      work: [
+        "Joined Game Platform R&D, working on the gaming resource manager for PlayStation's next-gen cloud gaming.",
+        'Implemented fast game switch in Rust, featuring players switching games without starting a new stream session.',
+        'Developed REST-APIs for operations and maintenance, allowing developers to interact with compute sleds by a single command remotely.',
+        'Integrated event reporting into the system, improving runtime observability and providing statistics for studying user behaviors.'
+      ]
+    },
+    {
       date: 'Jan 2020 - July 2020',
       icon: 'apple',
       company: 'Apple Inc.',
       team: 'CoreOS China',
       position: 'Software Engineer Intern',
       work: [
-        'Joined CoreOS China team, working on an internal tool that automates routine tasks at Apple’s manufacturing lines in China.',
+        "Joined CoreOS China team, working on an internal tool that automates routine tasks at Apple's manufacturing lines in China.",
         'Implemented the front end that allows users to create template or customized workflows for routine manufacturing tasks.',
         'Designed the user interface, providing a streamlined experience to build and modify workflows.',
         'Evaluated data and visualized in Python such as line charts of monthly usage.',
