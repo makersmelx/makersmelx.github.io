@@ -34,7 +34,7 @@ const DomContent = () => {
       <Stack direction="column" alignItems="center" spacing={3}>
         <Avatar
           alt="Mike Wu"
-          src="https://www.gravatar.com/avatar/c8fd8dc38f5759e9bdbe271e203bb6cb?s=2048"
+          src="https://www.gravatar.com/avatar/9c8dbd0950c39e91e7906d08531846a24b5e876ab691f254c3befeb64cd2be22?s=2048"
           sx={{ width: 120, height: 120 }}
         />
         <Typography variant="h4" component="div" gutterBottom>
